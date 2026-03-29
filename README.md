@@ -15,82 +15,131 @@
 | **讲解风格** | 费曼学习法：用生活化比喻解释抽象概念 |
 | **数学要求** | 从零推导，不假设任何前置知识 |
 | **实践要求** | 每章都有可运行的代码实现 |
+| **总章节数** | 60章 |
 
 ---
 
-## 🗺️ 全书架构
+## 📁 章节目录
 
-### 第一部分：热身运动（第1-5章）
-1. **第一章：什么是学习？** —— 从人脑学习类比机器学习
-2. **第二章：机器如何"看见"数据** —— 数据类型、特征、标签
-3. **第三章：预测的起点——猜测与误差** —— 损失函数初步
-4. **第四章：一步一步变得更好** —— 梯度下降的直觉
-5. **第五章：Python热身** —— 编程基础与NumPy
+> ⚠️ **注意**: 目前完成度约 42%，标注 ✅ 为已完成章节
 
-### 第二部分：经典机器学习（第6-15章）
-6. **第六章：K近邻——物以类聚** —— KNN算法
-7. **第七章：线性回归——画一条最贴切的线** —— 从一元到多元
-8. **第八章：逻辑回归——是或不是** —— 分类问题的入门
-9. **第九章：决策树——二十个问题的智慧** —— ID3, C4.5, CART
-10. **第十章：支持向量机——找到最宽的路** —— SVM完整推导
-11. **第十一章：朴素贝叶斯——用概率做判断** —— 贝叶斯定理与应用
-12. **第十二章：集成学习——三个臭皮匠** —— Bagging, Boosting, Random Forest
-13. **第十三章：梯度提升树——层层递进的智慧** —— XGBoost, LightGBM
-14. **第十四章：聚类——自动发现群组** —— K-Means, DBSCAN, 层次聚类
-15. **第十五章：降维——抓住主要矛盾** —— PCA, t-SNE
+每个章节都包含：
+- `README.md` - 主章节内容
+- `code/` - 可运行的代码示例
+- `exercises.md` - 练习题（部分章节）
+- `references.bib` - 参考文献（部分章节）
 
-### 第三部分：神经网络基础（第16-25章）
-16. **第十六章：神经元的故事** —— 生物启发与感知机
-17. **第十七章：多层神经网络——层层的魔法** —— MLP前向传播
-18. **第十八章：反向传播——倒着算误差** —— 链式法则完整推导
-19. **第十九章：激活函数——引入非线性** —— Sigmoid, ReLU, Tanh
-20. **第二十章：优化器——更快更好的下降** —— SGD, Momentum, Adam
-21. **第二十一章：正则化——防止死记硬背** —— L1/L2, Dropout
-22. **第二十二章：初始化——好的开始是成功的一半** —— Xavier, He
-23. **第二十三章：批归一化——让学习更稳定** —— BatchNorm
-24. **第二十四章：神经网络实战——手搓一个识别器** —— 完整项目
-25. **第二十五章：从0实现反向传播——不用框架** —— 纯NumPy实现
+### 第一部分：基础概念与Python热身 (Part 1) ✅ 已完成
 
-### 第四部分：深度学习进阶（第26-40章）
-26. **第二十六章：卷积神经网络——眼睛的启示** —— CNN基础
-27. **第二十七章：卷积层的数学——滑动窗口的奥秘** —— 卷积运算详解
-28. **第二十八章：池化与下采样——抓住重点** —— Pooling层
-29. **第二十九章：经典CNN架构——站在巨人肩膀** —— LeNet到ResNet
-30. **第三十章：循环神经网络——记住过去** —— RNN基础
-31. **第三十一章：LSTM——长期记忆的秘诀** —— 门控机制详解
-32. **第三十二章：GRU——简化版的智慧** —— LSTM的轻量替代
-33. **第三十三章：Seq2Seq与注意力——专注的力量** —— Attention机制
-34. **第三十四章：Transformer——注意力就是你所需要的一切** —— 完整实现
-35. **第三十五章：自编码器——压缩与重建** —— Autoencoder
-36. **第三十六章：生成对抗网络——造假与打假的艺术** —— GAN
-37. **第三十七章：扩散模型——一步步去噪** —— Diffusion Models
-38. **第三十八章：图神经网络——连接的力量** —— GNN入门
-39. **第三十九章：强化学习——试错中成长** —— RL基础
-40. **第四十章：大语言模型——AI的新时代** —— GPT, BERT原理
+| 章节 | 标题 | 目录 | 状态 |
+|:---:|:---|:---|:---:|
+| 第01章 | 什么是学习？ | [`chapters/chapter-01-what-is-learning/`](chapters/chapter-01-what-is-learning/) | ✅ |
+| 第02章 | 看见数据 | [`chapters/chapter-02-seeing-data/`](chapters/chapter-02-seeing-data/) | ✅ |
+| 第03章 | 预测与损失 | [`chapters/chapter-03-prediction-loss/`](chapters/chapter-03-prediction-loss/) | ✅ |
+| 第04章 | 梯度下降 | [`chapters/chapter-04-gradient-descent/`](chapters/chapter-04-gradient-descent/) | ✅ |
+| 第05章 | Python热身 | [`chapters/chapter-05-python-warmup/`](chapters/chapter-05-python-warmup/) | ✅ |
 
-### 第五部分：数学武器库（第41-50章）
-41. **第四十一章：线性代数——向量和矩阵的游戏** —— 从零开始
-42. **第四十二章：矩阵运算——乘法与分解** —— 特征值、SVD
-43. **第四十三章：微积分——变化的学问** —— 导数与积分
-44. **第四十四章：偏导数——多变量的变化** —— 多元微积分
-45. **第四十五章：链式法则——复合函数的奥秘** —— 反向传播的数学基础
-46. **第四十六章：概率论——不确定性的语言** —— 基础概念
-47. **第四十七章：概率分布——数据的形状** —— 常见分布详解
-48. **第四十八章：信息论——度量信息** —— 熵、KL散度
-49. **第四十九章：优化理论——寻找最优解** —— 凸优化基础
-50. **第五十章：统计学——从数据中学习** —— 估计、假设检验
+### 第二部分：经典机器学习算法 (Part 2)
 
-### 第六部分：工程实践（第51-60章）
-51. **第五十一章：PyTorch入门——现代深度学习框架**
-52. **第五十二章：TensorFlow入门——另一个选择**
-53. **第五十三章：数据预处理—— garbage in, garbage out**
-54. **第五十四章：特征工程——数据的炼金术**
-55. **第五十五章：模型评估——如何判断好坏** —— 指标详解
-56. **第五十六章：交叉验证——更可靠的评估**
-57. **第五十七章：超参数调优——寻找最佳配置**
-58. **第五十八章：模型部署——让模型服务世界**
-59. **第五十九章：MLOps——机器学习工程化**
-60. **第六十章：完整项目——端到端的AI应用**
+| 章节 | 标题 | 目录 |
+|:---:|:---|:---|
+| 第06章 | K近邻算法 | [`chapters/chapter-06-knn/`](chapters/chapter-06-knn/) |
+| 第07章 | 线性回归 | [`chapters/chapter-07-linear-regression/`](chapters/chapter-07-linear-regression/) |
+| 第08章 | 逻辑回归 | [`chapters/chapter-08-logistic-regression/`](chapters/chapter-08-logistic-regression/) |
+| 第09章 | 决策树 | [`chapters/chapter-09-decision-tree/`](chapters/chapter-09-decision-tree/) |
+| 第10章 | 支持向量机 | [`chapters/chapter-10-svm/`](chapters/chapter-10-svm/) |
+| 第11章 | 朴素贝叶斯 | [`chapters/chapter-11-naive-bayes/`](chapters/chapter-11-naive-bayes/) |
+| 第12章 | 集成学习 | [`chapters/chapter-12-ensemble/`](chapters/chapter-12-ensemble/) |
+| 第13章 | K-Means聚类 | [`chapters/chapter-13-kmeans/`](chapters/chapter-13-kmeans/) |
+| 第14章 | 层次聚类与DBSCAN | [`chapters/chapter-14-hierarchical-dbscan/`](chapters/chapter-14-hierarchical-dbscan/) |
+| 第15章 | 降维与PCA | [`chapters/chapter-15-pca/`](chapters/chapter-15-pca/) |
+| 第16章 | 感知机 | [`chapters/chapter-16-perceptron/`](chapters/chapter-16-perceptron/) |
+| 第17章 | 多层神经网络 | [`chapters/chapter-17-neural-network/`](chapters/chapter-17-neural-network/) |
+
+### 第三部分：神经网络与深度学习基础 (Part 3)
+
+| 章节 | 标题 | 目录 |
+|:---:|:---|:---|
+| 第18章 | 反向传播算法 | [`chapters/chapter-18-backpropagation/`](chapters/chapter-18-backpropagation/) |
+| 第19章 | 激活函数 | [`chapters/chapter-19-activation/`](chapters/chapter-19-activation/) |
+| 第20章 | 优化器 | [`chapters/chapter-20-optimizer/`](chapters/chapter-20-optimizer/) |
+| 第21章 | 正则化 | [`chapters/chapter-21-regularization/`](chapters/chapter-21-regularization/) |
+| 第22章 | 卷积神经网络 | [`chapters/chapter-22-cnn/`](chapters/chapter-22-cnn/) |
+| 第23章 | 循环神经网络 | [`chapters/chapter-23-rnn/`](chapters/chapter-23-rnn/) |
+| 第24章 | 注意力机制与Transformer | [`chapters/chapter-24-attention-transformer/`](chapters/chapter-24-attention-transformer/) |
+| 第25章 | 预训练与微调 | [`chapters/chapter-25-pretraining/`](chapters/chapter-25-pretraining/) |
+| 第26章 | 大语言模型与提示工程 | [`chapters/chapter-26-llm-prompting/`](chapters/chapter-26-llm-prompting/) |
+| 第27章 | RAG检索增强生成 | [`chapters/chapter-27-rag/`](chapters/chapter-27-rag/) |
+| 第28章 | 多模态学习 | [`chapters/chapter-28-multimodal/`](chapters/chapter-28-multimodal/) |
+| 第29章 | 生成对抗网络 | [`chapters/chapter-29-gan/`](chapters/chapter-29-gan/) |
+| 第30章 | 强化学习基础 | [`chapters/chapter-30-reinforcement-learning/`](chapters/chapter-30-reinforcement-learning/) |
+| 第31章 | 深度强化学习进阶 | [`chapters/chapter-31-deep-rl/`](chapters/chapter-31-deep-rl/) |
+
+### 第四部分：深度学习进阶专题 (Part 4)
+
+| 章节 | 标题 | 目录 |
+|:---:|:---|:---|
+| 第32章 | 图神经网络 | [`chapters/chapter-32-gnn/`](chapters/chapter-32-gnn/) |
+| 第33章 | 时序预测 | [`chapters/chapter-33-timeseries/`](chapters/chapter-33-timeseries/) |
+| 第34章 | 神经架构搜索基础 | [`chapters/chapter-34-nas/`](chapters/chapter-34-nas/) |
+| 第35章 | 自监督学习 | [`chapters/chapter-35-self-supervised/`](chapters/chapter-35-self-supervised/) |
+| 第36章 | 联邦学习 | [`chapters/chapter-36-federated/`](chapters/chapter-36-federated/) |
+| 第37章 | NAS进阶 | [`chapters/chapter-37-nas-advanced/`](chapters/chapter-37-nas-advanced/) |
+| 第38章 | 扩散模型 | [`chapters/chapter-38-diffusion/`](chapters/chapter-38-diffusion/) |
+| 第39章 | 3D视觉与NeRF | [`chapters/chapter-39-3d-vision/`](chapters/chapter-39-3d-vision/) |
+| 第40章 | 强化学习前沿 | [`chapters/chapter-40-rl-advanced/`](chapters/chapter-40-rl-advanced/) |
+| 第41章 | 模型可解释性 | [`chapters/chapter-41-xai/`](chapters/chapter-41-xai/) |
+| 第42章 | 扩散模型进阶 | [`chapters/chapter-42-diffusion-advanced/`](chapters/chapter-42-diffusion-advanced/) |
+| 第43章 | 多模态学习前沿 | [`chapters/chapter-43-multimodal-advanced/`](chapters/chapter-43-multimodal-advanced/) |
+| 第44章 | AI Agent智能体 | [`chapters/chapter-44-ai-agents/`](chapters/chapter-44-ai-agents/) |
+| 第45章 | 模型不确定性 | [`chapters/chapter-45-uncertainty/`](chapters/chapter-45-uncertainty/) |
+| 第46章 | 神经符号AI | [`chapters/chapter-46-neuro-symbolic/`](chapters/chapter-46-neuro-symbolic/) |
+
+### 第五部分：数学武器库 (Part 5)
+
+| 章节 | 标题 | 目录 |
+|:---:|:---|:---|
+| 第47章 | 线性代数 | [`chapters/chapter-47-linear-algebra/`](chapters/chapter-47-linear-algebra/) |
+| 第48章 | 微积分 | [`chapters/chapter-48-calculus/`](chapters/chapter-48-calculus/) |
+| 第49章 | 概率论 | [`chapters/chapter-49-probability/`](chapters/chapter-49-probability/) |
+| 第50章 | 概率图模型 | [`chapters/chapter-50-graphical-models/`](chapters/chapter-50-graphical-models/) |
+| 第51章 | 因果推断 | [`chapters/chapter-51-causal/`](chapters/chapter-51-causal/) |
+| 第52章 | 生成模型进阶 | [`chapters/chapter-52-generative-advanced/`](chapters/chapter-52-generative-advanced/) |
+| 第53章 | 图神经网络进阶 | [`chapters/chapter-53-gnn-advanced/`](chapters/chapter-53-gnn-advanced/) |
+| 第54章 | 神经符号AI进阶 | [`chapters/chapter-54-neuro-symbolic-advanced/`](chapters/chapter-54-neuro-symbolic-advanced/) |
+
+### 第六部分：工程实践与完整项目 (Part 6)
+
+| 章节 | 标题 | 目录 |
+|:---:|:---|:---|
+| 第55章 | 持续学习 | [`chapters/chapter-55-continual/`](chapters/chapter-55-continual/) |
+| 第56章 | 超参数优化 | [`chapters/chapter-56-hpo/`](chapters/chapter-56-hpo/) |
+| 第57章 | 模型压缩 | [`chapters/chapter-57-model-compression/`](chapters/chapter-57-model-compression/) |
+| 第58章 | MLOps | [`chapters/chapter-58-mlops/`](chapters/chapter-58-mlops/) |
+| 第59章 | AI for Science | [`chapters/chapter-59-ai-for-science/`](chapters/chapter-59-ai-for-science/) |
+| 第60章 | 端到端项目 | [`chapters/chapter-60-end-to-end-project/`](chapters/chapter-60-end-to-end-project/) |
+
+---
+
+## 🗺️ 详细目录结构
+
+```
+ml-book-for-kids/
+├── README.md                          # 本文件
+├── BOOK_TOC.md                        # 完整目录（含页码）
+├── chapters/                          # 所有章节
+│   ├── chapter-01-what-is-learning/   # 第01章
+│   │   ├── README.md                  # 主内容
+│   │   └── code/                      # 代码文件
+│   ├── chapter-02-seeing-data/        # 第02章
+│   │   ├── README.md
+│   │   └── code/
+│   └── ...                            # 更多章节
+├── deprecated/                        # 废弃/归档文件
+├── references/                        # 参考文献
+├── assets/                            # 图片等资源
+└── exercises/                         # 额外练习题
+```
 
 ---
 
@@ -130,33 +179,52 @@
 
 ---
 
-## 📅 写作计划
+## 📊 实际完成进度
 
-| 阶段 | 章节 | 预计时间 |
-|------|------|----------|
-| 第一部分 | 1-5章 | 第1周 |
-| 第二部分 | 6-15章 | 第2-3周 |
-| 第三部分 | 16-25章 | 第4-6周 |
-| 第四部分 | 26-40章 | 第7-10周 |
-| 第五部分 | 41-50章 | 第11-13周 |
-| 第六部分 | 51-60章 | 第14-16周 |
-| 审校修订 | 全书 | 第17-20周 |
+| 部分 | 章节 | 状态 | 完成度 |
+|:---:|:---|:---|:---:|
+| **Part 1** | 01-05 | ✅ 已完成 | 100% |
+| **Part 2** | 06-10 | ✅ 已完成 | 100% |
+| | 11-15 | ❌ 待补充 | 0% |
+| | 16-17 | ✅ 已完成 | 100% |
+| **Part 3** | 18 | ✅ 已完成 | 100% |
+| | 19 | ❌ 待补充 | 0% |
+| | 20-23 | ✅ 已完成 | 100% |
+| | 24 | ⚠️ 内容较少 | 30% |
+| | 25-26 | ✅ 已完成 | 100% |
+| | 27 | ❌ 待补充 | 0% |
+| | 28 | ✅ 已完成 | 100% |
+| | 29-31 | ❌ 待补充 | 0% |
+| **Part 4** | 32-34 | ❌ 待补充 | 0% |
+| | 35 | ✅ 已完成 | 100% |
+| | 36 | ❌ 待补充 | 0% |
+| | 37-42 | ✅ 已完成 | 100% |
+| | 43-46 | ❌ 待补充 | 0% |
+| **Part 5** | 47-49 | ❌ 待补充 | 0% |
+| | 50 | ✅ 已完成 | 100% |
+| | 51 | ❌ 待补充 | 0% |
+| **Part 6** | 52-59 | ❌ 待补充 | 0% |
+| | 60 | ✅ 已完成 | 100% |
 
-**总计**: 约20周（5个月）完成初稿
+**总计**: 25/60 章完成 (~42%)
 
 ---
 
-## 🎯 今日任务
+## 🎯 补全计划
 
-**开始第一章：什么是学习？**
-
-内容要点：
-- 人类学习的例子
-- 机器学习的类比
-- 监督学习 vs 无监督学习
-- 第一个"Hello ML"程序
+| 优先级 | 章节 | 原因 |
+|:---:|:---|:---|
+| **P0** | 11-15, 19, 29-31 | 基础内容，知识体系必需 |
+| **P1** | 27, 32-34, 36 | 热门话题，实用价值高 |
+| **P2** | 43-46 | 前沿专题，锦上添花 |
+| **P3** | 47-49, 51-59 | 数学/工程补充 |
 
 ---
 
-*记录创建时间: 2026-03-24*
-*版本: v0.1*
+## 📅 更新记录
+
+- `2026-03-30` - 整理目录结构，诚实标注完成状态
+- `2026-03-27` - 创建规范化的60章框架
+- `2026-03-24` - 项目启动
+
+*版本: v1.1 (WIP - 持续更新中)*
