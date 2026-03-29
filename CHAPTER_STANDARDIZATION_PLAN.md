@@ -116,3 +116,21 @@ chapter-XX-主题/
 
 *计划创建时间: 2026-03-30*  
 *最后更新: 2026-03-30*
+
+
+## 有价值但遗漏的内容 (已整合)
+
+### 已整合到 chapters/ 目录的内容:
+- chapters-old/chapter-09-decision-tree/CONTENT.md (655行) → chapter-09-decision-tree/
+- chapters-old/chapter-12-ensemble/manuscript.md (259行) → chapter-12-ensemble/
+- chapters-old/chapter-13-kmeans/manuscript.md (325行) → chapter-13-kmeans/
+- chapters-old/chapter-14-hierarchical/manuscript.md (1104行) → chapter-14-hierarchical-dbscan/
+- book/chapter21_regularization.md (506行) → chapter-21-regularization/
+- book/chapter21_regularization_part1.md (352行) → chapter-21-regularization/
+- chapters-unified/chapter-37/code/*.py → chapter-37-nas-advanced/code/
+
+**说明**: 这些内容可作为重写时的参考材料，特别是 chapter-14-hierarchical 的 1104 行 manuscript.md 是高质量内容。
+
+## 建议
+
+在重写每个章节前，先检查 chapters-old/ 中是否有可用内容，避免重复劳动。
