@@ -1,0 +1,22 @@
+---
+title: "机器学习与深度学习：从小学生到大师"
+subtitle: "用最简单的语言，讲最深刻的道理"
+author: "ML教材创作团队"
+date: "2026-03-27"
+lang: zh-CN
+geometry:
+  - margin=2.5cm
+  - top=2.5cm
+  - bottom=2.5cm
+fontsize: 11pt
+mainfont: Noto Serif CJK SC
+sansfont: Noto Sans CJK SC
+monofont: Noto Sans Mono CJK SC
+CJKmainfont: Noto Serif CJK SC
+CJKsansfont: Noto Sans CJK SC
+CJKmonofont: Noto Sans Mono CJK SC
+toc: true
+toc-depth: 3
+number-sections: true
+highlight-style: tango
+---

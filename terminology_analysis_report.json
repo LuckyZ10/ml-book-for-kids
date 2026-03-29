@@ -1,0 +1,3283 @@
+{
+  "summary": {
+    "total_files": 135,
+    "total_terms_tracked": 42,
+    "inconsistencies_found": 319
+  },
+  "frequency_table": {
+    "特征": 943,
+    "神经网络": 577,
+    "机器学习": 487,
+    "卷积": 349,
+    "感知机": 342,
+    "推理": 332,
+    "学习率": 233,
+    "损失函数": 225,
+    "反向传播": 222,
+    "预训练": 210,
+    "注意力机制": 198,
+    "深度学习": 195,
+    "正则化": 177,
+    "神经元": 175,
+    "epoch": 167,
+    "梯度下降": 159,
+    "激活函数": 150,
+    "微调": 138,
+    "过拟合": 126,
+    "超参数": 120,
+    "嵌入": 114,
+    "归一化": 113,
+    "池化": 111,
+    "标签": 106,
+    "部署": 89,
+    "人工智能": 71,
+    "优化器": 69,
+    "transformer": 58,
+    "批量": 57,
+    "自注意力": 56,
+    "全连接": 55,
+    "relu": 48,
+    "softmax": 41,
+    "循环神经网络": 39,
+    "长短期记忆": 35,
+    "卷积神经网络": 33,
+    "多层感知机": 30,
+    "训练集": 29,
+    "dropout": 19,
+    "欠拟合": 12,
+    "测试集": 12,
+    "验证集": 11
+  },
+  "variants_used": {
+    "机器学习": [
+      "机器学习",
+      "ml",
+      "machine learning"
+    ],
+    "深度学习": [
+      "深度学习",
+      "deep learning"
+    ],
+    "神经网络": [
+      "神经网络",
+      "neural network",
+      "neural networks"
+    ],
+    "神经元": [
+      "神经元"
+    ],
+    "正则化": [
+      "regularization",
+      "正则化"
+    ],
+    "过拟合": [
+      "overfitting",
+      "过拟合"
+    ],
+    "dropout": [
+      "dropout"
+    ],
+    "特征": [
+      "特征",
+      "feature"
+    ],
+    "批量": [
+      "batch",
+      "批次",
+      "批量"
+    ],
+    "归一化": [
+      "normalization",
+      "bn",
+      "层归一化",
+      "归一化",
+      "batch normalization"
+    ],
+    "梯度下降": [
+      "梯度下降",
+      "gradient descent"
+    ],
+    "损失函数": [
+      "cost function",
+      "代价函数",
+      "目标函数",
+      "loss function",
+      "损失函数"
+    ],
+    "欠拟合": [
+      "underfitting",
+      "欠拟合"
+    ],
+    "训练集": [
+      "训练集"
+    ],
+    "超参数": [
+      "超参数",
+      "hyperparameter"
+    ],
+    "优化器": [
+      "optimizer",
+      "优化器"
+    ],
+    "学习率": [
+      "学习率",
+      "learning rate"
+    ],
+    "epoch": [
+      "轮次",
+      "轮",
+      "epoch"
+    ],
+    "感知机": [
+      "感知机",
+      "perceptron"
+    ],
+    "反向传播": [
+      "反向传播",
+      "bp",
+      "backpropagation"
+    ],
+    "transformer": [
+      "变换器",
+      "转换器",
+      "transformer"
+    ],
+    "标签": [
+      "标签",
+      "label"
+    ],
+    "人工智能": [
+      "人工智能",
+      "ai",
+      "artificial intelligence"
+    ],
+    "推理": [
+      "inference",
+      "推理"
+    ],
+    "测试集": [
+      "测试集"
+    ],
+    "全连接": [
+      "全连接",
+      "fully connected",
+      "dense"
+    ],
+    "嵌入": [
+      "嵌入",
+      "词嵌入",
+      "embedding"
+    ],
+    "激活函数": [
+      "activation function",
+      "激活函数"
+    ],
+    "多层感知机": [
+      "多层感知机",
+      "mlp"
+    ],
+    "relu": [
+      "relu"
+    ],
+    "循环神经网络": [
+      "rnn",
+      "recurrent neural network",
+      "循环神经网络"
+    ],
+    "softmax": [
+      "softmax"
+    ],
+    "注意力机制": [
+      "注意力机制",
+      "attention"
+    ],
+    "自注意力": [
+      "self-attention",
+      "自注意力"
+    ],
+    "预训练": [
+      "预训练",
+      "pre-training",
+      "pretraining"
+    ],
+    "部署": [
+      "部署",
+      "deployment"
+    ],
+    "微调": [
+      "微调",
+      "fine-tuning"
+    ],
+    "卷积神经网络": [
+      "convolutional neural network",
+      "卷积神经网络",
+      "cnn"
+    ],
+    "长短期记忆": [
+      "lstm",
+      "long short-term memory",
+      "长短期记忆"
+    ],
+    "卷积": [
+      "卷积",
+      "convolution"
+    ],
+    "池化": [
+      "池化",
+      "pooling"
+    ],
+    "验证集": [
+      "验证集"
+    ]
+  },
+  "inconsistencies": [
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/book/chapter21_regularization.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 1,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/book/chapter21_regularization.md",
+      "standard_term": "正则化",
+      "variants": {
+        "正则化": 10,
+        "regularization": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/book/chapter21_regularization.md",
+      "standard_term": "过拟合",
+      "variants": {
+        "过拟合": 1,
+        "overfitting": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/book/chapter21_regularization.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 5,
+        "feature": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/book/chapter21_regularization.md",
+      "standard_term": "归一化",
+      "variants": {
+        "normalization": 1,
+        "batch normalization": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/book/chapter21_regularization_part1.md",
+      "standard_term": "正则化",
+      "variants": {
+        "正则化": 19,
+        "regularization": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/book/chapter21_regularization_part1.md",
+      "standard_term": "过拟合",
+      "variants": {
+        "过拟合": 13,
+        "overfitting": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/book/chapter21_regularization_part1.md",
+      "standard_term": "欠拟合",
+      "variants": {
+        "欠拟合": 1,
+        "underfitting": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-03-prediction-and-loss.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 4,
+        "machine learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-03-prediction-and-loss.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 1,
+        "deep learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-04-gradient-descent.md",
+      "standard_term": "梯度下降",
+      "variants": {
+        "梯度下降": 13,
+        "gradient descent": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-04-gradient-descent.md",
+      "standard_term": "学习率",
+      "variants": {
+        "学习率": 23,
+        "learning rate": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-04-gradient-descent.md",
+      "standard_term": "批量",
+      "variants": {
+        "批量": 3,
+        "batch": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-04/chapter-04.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 5,
+        "deep learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-04/chapter-04.md",
+      "standard_term": "梯度下降",
+      "variants": {
+        "梯度下降": 31,
+        "gradient descent": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-04/chapter-04.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 4,
+        "loss function": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-04/chapter-04.md",
+      "standard_term": "学习率",
+      "variants": {
+        "学习率": 27,
+        "learning rate": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-05-python-warmup.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 11,
+        "ml": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-06-knn.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-06-knn.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 4,
+        "feature": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-07-linear-regression.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 6,
+        "loss function": 1,
+        "cost function": 1,
+        "代价函数": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-08.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-09-decision-tree/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 2,
+        "machine learning": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-09.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 2,
+        "machine learning": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-09.md",
+      "standard_term": "过拟合",
+      "variants": {
+        "过拟合": 8,
+        "overfitting": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-12-ensemble/manuscript.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 5,
+        "machine learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-12-ensemble/manuscript.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 2,
+        "目标函数": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-15-dimensionality-reduction/chapter-15.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-15-dimensionality-reduction/chapter-15.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 1,
+        "目标函数": 2
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-16-perceptron.md",
+      "standard_term": "感知机",
+      "variants": {
+        "感知机": 56,
+        "perceptron": 24
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-16-perceptron.md",
+      "standard_term": "标签",
+      "variants": {
+        "标签": 8,
+        "label": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-16-perceptron.md",
+      "standard_term": "epoch",
+      "variants": {
+        "epoch": 11,
+        "轮次": 5,
+        "轮": 11
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-16-perceptron/chapter-16-perceptron.md",
+      "standard_term": "人工智能",
+      "variants": {
+        "人工智能": 1,
+        "ai": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-16-perceptron/chapter-16-perceptron.md",
+      "standard_term": "感知机",
+      "variants": {
+        "感知机": 48,
+        "perceptron": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-16-perceptron/chapter-16-perceptron.md",
+      "standard_term": "多层感知机",
+      "variants": {
+        "多层感知机": 2,
+        "mlp": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-16-perceptron/chapter-16-perceptron.md",
+      "standard_term": "反向传播",
+      "variants": {
+        "反向传播": 3,
+        "backpropagation": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-16-perceptron/chapter-16-perceptron.md",
+      "standard_term": "学习率",
+      "variants": {
+        "学习率": 8,
+        "learning rate": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-17-multilayer-neural-network.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 10,
+        "deep learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-17-multilayer-neural-network.md",
+      "standard_term": "人工智能",
+      "variants": {
+        "人工智能": 1,
+        "artificial intelligence": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-17-multilayer-neural-network.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 38,
+        "neural networks": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-17-multilayer-neural-network.md",
+      "standard_term": "感知机",
+      "variants": {
+        "感知机": 28,
+        "perceptron": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-17-multilayer-neural-network.md",
+      "standard_term": "多层感知机",
+      "variants": {
+        "多层感知机": 3,
+        "mlp": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-17-multilayer-neural-network.md",
+      "standard_term": "反向传播",
+      "variants": {
+        "反向传播": 28,
+        "backpropagation": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-17-multilayer-neural-network.md",
+      "standard_term": "激活函数",
+      "variants": {
+        "激活函数": 33,
+        "activation function": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-17-multilayer-neural-network.md",
+      "standard_term": "批量",
+      "variants": {
+        "批量": 2,
+        "batch": 1,
+        "批次": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-17-multilayer-neural-network.md",
+      "standard_term": "全连接",
+      "variants": {
+        "全连接": 1,
+        "fully connected": 1,
+        "dense": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-19-activation-functions/chapter-19.md",
+      "standard_term": "激活函数",
+      "variants": {
+        "激活函数": 19,
+        "activation function": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-24-attention-transformer/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-24-attention-transformer/README.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 2,
+        "attention": 17
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-24-attention-transformer/README.md",
+      "standard_term": "自注意力",
+      "variants": {
+        "自注意力": 1,
+        "self-attention": 6
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-24-attention-transformer/README.md",
+      "standard_term": "嵌入",
+      "variants": {
+        "嵌入": 3,
+        "embedding": 1,
+        "词嵌入": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-24-attention-transformer/README.md",
+      "standard_term": "归一化",
+      "variants": {
+        "归一化": 3,
+        "层归一化": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-30-reinforcement-learning.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 4,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-43-multimodal-learning.md",
+      "standard_term": "transformer",
+      "variants": {
+        "transformer": 1,
+        "变换器": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-43-multimodal-learning.md",
+      "standard_term": "嵌入",
+      "variants": {
+        "嵌入": 3,
+        "词嵌入": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-43-multimodal-learning.md",
+      "standard_term": "预训练",
+      "variants": {
+        "预训练": 6,
+        "pre-training": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-53-gnn-geometric-deep-learning.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 2,
+        "machine learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-53-gnn-geometric-deep-learning.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 10,
+        "deep learning": 5
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-53-gnn-geometric-deep-learning.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 22,
+        "neural networks": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-53-gnn-geometric-deep-learning.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 2,
+        "attention": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-53-gnn-geometric-deep-learning.md",
+      "standard_term": "池化",
+      "variants": {
+        "池化": 1,
+        "pooling": 5
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-59-mlops.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 9,
+        "machine learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-59-mlops.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 30,
+        "feature": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter12/chapter12.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 4,
+        "machine learning": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter18_backpropagation.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 8,
+        "deep learning": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter18_backpropagation.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 17,
+        "neural networks": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter18_backpropagation.md",
+      "standard_term": "反向传播",
+      "variants": {
+        "反向传播": 38,
+        "backpropagation": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter18_backpropagation.md",
+      "standard_term": "卷积神经网络",
+      "variants": {
+        "卷积神经网络": 1,
+        "cnn": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter18_backpropagation.md",
+      "standard_term": "批量",
+      "variants": {
+        "批量": 1,
+        "batch": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter18_backpropagation.md",
+      "standard_term": "归一化",
+      "variants": {
+        "归一化": 5,
+        "normalization": 2,
+        "batch normalization": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter20_optimizer.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 5,
+        "deep learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter20_optimizer.md",
+      "standard_term": "梯度下降",
+      "variants": {
+        "梯度下降": 5,
+        "gradient descent": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter20_optimizer.md",
+      "standard_term": "正则化",
+      "variants": {
+        "正则化": 5,
+        "regularization": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter21_regularization.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter21_regularization.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 4,
+        "deep learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter21_regularization.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 5,
+        "neural networks": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter21_regularization.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 7,
+        "目标函数": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter21_regularization.md",
+      "standard_term": "正则化",
+      "variants": {
+        "正则化": 40,
+        "regularization": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter21_regularization.md",
+      "standard_term": "过拟合",
+      "variants": {
+        "过拟合": 12,
+        "overfitting": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter21_regularization.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 3,
+        "feature": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter21_regularization.md",
+      "standard_term": "批量",
+      "variants": {
+        "批量": 1,
+        "batch": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter21_regularization.md",
+      "standard_term": "归一化",
+      "variants": {
+        "normalization": 2,
+        "batch normalization": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter22-cnn/README.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 4,
+        "deep learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter22-cnn/README.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 11,
+        "neural network": 2,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter22-cnn/README.md",
+      "standard_term": "反向传播",
+      "variants": {
+        "反向传播": 7,
+        "backpropagation": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter22-cnn/README.md",
+      "standard_term": "卷积神经网络",
+      "variants": {
+        "卷积神经网络": 4,
+        "cnn": 2,
+        "convolutional neural network": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter22-cnn/README.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 1,
+        "attention": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter22-cnn/README.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 33,
+        "feature": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter22-cnn/README.md",
+      "standard_term": "卷积",
+      "variants": {
+        "卷积": 78,
+        "convolution": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter22-cnn/README.md",
+      "standard_term": "池化",
+      "variants": {
+        "池化": 26,
+        "pooling": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter22-cnn/code/README.md",
+      "standard_term": "卷积神经网络",
+      "variants": {
+        "卷积神经网络": 1,
+        "cnn": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter22-cnn/code/README.md",
+      "standard_term": "全连接",
+      "variants": {
+        "全连接": 1,
+        "dense": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter24_transformer/README.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 2,
+        "attention": 6
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter24_transformer/README.md",
+      "standard_term": "自注意力",
+      "variants": {
+        "自注意力": 1,
+        "self-attention": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter24_transformer/chapter24_attention_transformer.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter24_transformer/chapter24_attention_transformer.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 5,
+        "attention": 37
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter24_transformer/chapter24_attention_transformer.md",
+      "standard_term": "预训练",
+      "variants": {
+        "预训练": 8,
+        "pretraining": 1,
+        "pre-training": 3
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter24_transformer/chapter24_attention_transformer.md",
+      "standard_term": "归一化",
+      "variants": {
+        "归一化": 1,
+        "normalization": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter25_pretraining_finetuning.md",
+      "standard_term": "学习率",
+      "variants": {
+        "学习率": 10,
+        "learning rate": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter25_pretraining_finetuning.md",
+      "standard_term": "嵌入",
+      "variants": {
+        "嵌入": 3,
+        "词嵌入": 2
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter25_pretraining_finetuning.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 8,
+        "feature": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter25_pretraining_finetuning.md",
+      "standard_term": "微调",
+      "variants": {
+        "微调": 43,
+        "fine-tuning": 5
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter25_pretraining_finetuning.md",
+      "standard_term": "预训练",
+      "variants": {
+        "预训练": 41,
+        "pretraining": 1,
+        "pre-training": 5
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter26_llm_prompting.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 1,
+        "attention": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter26_llm_prompting.md",
+      "standard_term": "自注意力",
+      "variants": {
+        "自注意力": 1,
+        "self-attention": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter26_llm_prompting.md",
+      "standard_term": "微调",
+      "variants": {
+        "微调": 1,
+        "fine-tuning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter27_rag/chapter27_rag.md",
+      "standard_term": "嵌入",
+      "variants": {
+        "嵌入": 8,
+        "embedding": 1,
+        "词嵌入": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter27_rag/chapter27_rag.md",
+      "standard_term": "预训练",
+      "variants": {
+        "预训练": 3,
+        "pre-training": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter30_reinforcement_learning.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter30_reinforcement_learning.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 7,
+        "neural networks": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter31-deep-rl-advanced.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 3,
+        "目标函数": 2
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter33.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter33.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 3,
+        "attention": 11
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter33.md",
+      "standard_term": "自注意力",
+      "variants": {
+        "自注意力": 7,
+        "self-attention": 5
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter33.md",
+      "standard_term": "归一化",
+      "variants": {
+        "归一化": 1,
+        "normalization": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter34.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter34.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 15,
+        "neural network": 1,
+        "neural networks": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter34.md",
+      "standard_term": "卷积神经网络",
+      "variants": {
+        "卷积神经网络": 1,
+        "cnn": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter34.md",
+      "standard_term": "循环神经网络",
+      "variants": {
+        "循环神经网络": 1,
+        "rnn": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter34.md",
+      "standard_term": "部署",
+      "variants": {
+        "部署": 1,
+        "deployment": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter34_nas.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 2,
+        "machine learning": 3,
+        "ml": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter34_nas.md",
+      "standard_term": "人工智能",
+      "variants": {
+        "artificial intelligence": 1,
+        "ai": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter34_nas.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 9,
+        "neural network": 1,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter34_nas.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 1,
+        "目标函数": 2
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter34_nas.md",
+      "standard_term": "循环神经网络",
+      "variants": {
+        "循环神经网络": 1,
+        "recurrent neural network": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter34_nas.md",
+      "standard_term": "部署",
+      "variants": {
+        "部署": 6,
+        "deployment": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter34_nas.md",
+      "standard_term": "池化",
+      "variants": {
+        "池化": 2,
+        "pooling": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter36_federated_learning.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 3,
+        "machine learning": 6
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter36_federated_learning.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 1,
+        "目标函数": 2
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter38_diffusion_models.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 1,
+        "目标函数": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter39-reinforcement-learning/plan.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 1,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter47/chapter47.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 1,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter47/chapter47.md",
+      "standard_term": "反向传播",
+      "variants": {
+        "反向传播": 1,
+        "backpropagation": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter47/chapter47.md",
+      "standard_term": "推理",
+      "variants": {
+        "推理": 57,
+        "inference": 14
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter47/plan.md",
+      "standard_term": "推理",
+      "variants": {
+        "推理": 10,
+        "inference": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter48/chapter48.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 5
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter48/chapter48.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 10,
+        "deep learning": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter48/chapter48.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 17,
+        "neural network": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter48/chapter48.md",
+      "standard_term": "推理",
+      "variants": {
+        "推理": 1,
+        "inference": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter51-causal-inference.md",
+      "standard_term": "推理",
+      "variants": {
+        "推理": 4,
+        "inference": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter51.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 4,
+        "machine learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter51.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 1,
+        "feature": 6
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter51.md",
+      "standard_term": "推理",
+      "variants": {
+        "推理": 4,
+        "inference": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter52-advanced-generative-models.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 1,
+        "attention": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter52-advanced-generative-models.md",
+      "standard_term": "推理",
+      "variants": {
+        "推理": 1,
+        "inference": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter52-advanced-generative-models.md",
+      "standard_term": "预训练",
+      "variants": {
+        "预训练": 7,
+        "pre-training": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter54-neuro-symbolic.md",
+      "standard_term": "人工智能",
+      "variants": {
+        "artificial intelligence": 1,
+        "ai": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter54-neuro-symbolic.md",
+      "standard_term": "嵌入",
+      "variants": {
+        "嵌入": 7,
+        "embedding": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter54-plan.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 31,
+        "feature": 6
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter54-plan.md",
+      "standard_term": "标签",
+      "variants": {
+        "标签": 1,
+        "label": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter54-plan.md",
+      "standard_term": "归一化",
+      "variants": {
+        "归一化": 3,
+        "normalization": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter55-plan.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter55-plan.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 4,
+        "neural networks": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter56-nas-advanced/chapter56-part2.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 2,
+        "machine learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter57/chapter57-plan.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "ml": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter57/chapter57-plan.md",
+      "standard_term": "超参数",
+      "variants": {
+        "超参数": 12,
+        "hyperparameter": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter57/chapter57.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 4,
+        "machine learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter57/chapter57.md",
+      "standard_term": "epoch",
+      "variants": {
+        "轮次": 1,
+        "轮": 8
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter57/chapter57.md",
+      "standard_term": "超参数",
+      "variants": {
+        "超参数": 28,
+        "hyperparameter": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter58/chapter58-plan.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 1,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter58/chapter58-plan.md",
+      "standard_term": "部署",
+      "variants": {
+        "部署": 7,
+        "deployment": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter58/chapter58.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "machine learning": 2,
+        "ml": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter58/chapter58.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 7,
+        "neural network": 3,
+        "neural networks": 8
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter58/chapter58.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 1,
+        "目标函数": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter58/chapter58.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 10,
+        "feature": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter58/chapter58.md",
+      "standard_term": "推理",
+      "variants": {
+        "推理": 10,
+        "inference": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter58/chapter58.md",
+      "standard_term": "卷积",
+      "variants": {
+        "卷积": 14,
+        "convolution": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter59-ai-for-science-plan.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter59-ai-for-science-plan.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 1,
+        "deep learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter59-ai-for-science-plan.md",
+      "standard_term": "人工智能",
+      "variants": {
+        "人工智能": 1,
+        "artificial intelligence": 1,
+        "ai": 7
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter_22_cnn/chapter_22_cnn.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 4,
+        "deep learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter_22_cnn/chapter_22_cnn.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 7,
+        "neural network": 2,
+        "neural networks": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter_22_cnn/chapter_22_cnn.md",
+      "standard_term": "卷积神经网络",
+      "variants": {
+        "卷积神经网络": 5,
+        "cnn": 1,
+        "convolutional neural network": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter_22_cnn/chapter_22_cnn.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 37,
+        "feature": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter_22_cnn/chapter_22_cnn.md",
+      "standard_term": "卷积",
+      "variants": {
+        "卷积": 105,
+        "convolution": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter_22_cnn/chapter_22_cnn.md",
+      "standard_term": "池化",
+      "variants": {
+        "池化": 26,
+        "pooling": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter_22_cnn/chapter_22_cnn.md",
+      "standard_term": "归一化",
+      "variants": {
+        "归一化": 2,
+        "normalization": 1,
+        "batch normalization": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter_28_multimodal.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter_28_multimodal.md",
+      "standard_term": "预训练",
+      "variants": {
+        "预训练": 1,
+        "pre-training": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-01/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 30,
+        "machine learning": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-01/README.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 1,
+        "deep learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-01/README.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 3,
+        "loss function": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-02/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 14,
+        "machine learning": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-02/README.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 1,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-02/README.md",
+      "standard_term": "嵌入",
+      "variants": {
+        "嵌入": 1,
+        "词嵌入": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-02/README.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 64,
+        "feature": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-02/README.md",
+      "standard_term": "归一化",
+      "variants": {
+        "归一化": 5,
+        "normalization": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-03/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 4,
+        "machine learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-03/README.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 1,
+        "deep learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-04/README.md",
+      "standard_term": "梯度下降",
+      "variants": {
+        "梯度下降": 13,
+        "gradient descent": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-04/README.md",
+      "standard_term": "学习率",
+      "variants": {
+        "学习率": 23,
+        "learning rate": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-04/README.md",
+      "standard_term": "批量",
+      "variants": {
+        "批量": 3,
+        "batch": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-05/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 11,
+        "ml": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-06/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-06/README.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 4,
+        "feature": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-07/README.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 6,
+        "loss function": 1,
+        "cost function": 1,
+        "代价函数": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-08/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-09/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 2,
+        "machine learning": 5
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-12/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 4,
+        "machine learning": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-15/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-15/README.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 1,
+        "目标函数": 2
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-16/README.md",
+      "standard_term": "感知机",
+      "variants": {
+        "感知机": 56,
+        "perceptron": 24
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-16/README.md",
+      "standard_term": "标签",
+      "variants": {
+        "标签": 8,
+        "label": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-16/README.md",
+      "standard_term": "epoch",
+      "variants": {
+        "epoch": 11,
+        "轮次": 5,
+        "轮": 11
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-17/README.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 10,
+        "deep learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-17/README.md",
+      "standard_term": "人工智能",
+      "variants": {
+        "人工智能": 1,
+        "artificial intelligence": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-17/README.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 38,
+        "neural networks": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-17/README.md",
+      "standard_term": "感知机",
+      "variants": {
+        "感知机": 28,
+        "perceptron": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-17/README.md",
+      "standard_term": "多层感知机",
+      "variants": {
+        "多层感知机": 3,
+        "mlp": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-17/README.md",
+      "standard_term": "反向传播",
+      "variants": {
+        "反向传播": 28,
+        "backpropagation": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-17/README.md",
+      "standard_term": "激活函数",
+      "variants": {
+        "激活函数": 33,
+        "activation function": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-17/README.md",
+      "standard_term": "批量",
+      "variants": {
+        "批量": 2,
+        "batch": 1,
+        "批次": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-17/README.md",
+      "standard_term": "全连接",
+      "variants": {
+        "全连接": 1,
+        "fully connected": 1,
+        "dense": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-18/README.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 8,
+        "deep learning": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-18/README.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 17,
+        "neural networks": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-18/README.md",
+      "standard_term": "反向传播",
+      "variants": {
+        "反向传播": 38,
+        "backpropagation": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-18/README.md",
+      "standard_term": "卷积神经网络",
+      "variants": {
+        "卷积神经网络": 1,
+        "cnn": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-18/README.md",
+      "standard_term": "批量",
+      "variants": {
+        "批量": 1,
+        "batch": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-18/README.md",
+      "standard_term": "归一化",
+      "variants": {
+        "归一化": 5,
+        "normalization": 2,
+        "batch normalization": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-19/README.md",
+      "standard_term": "激活函数",
+      "variants": {
+        "激活函数": 19,
+        "activation function": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-20/README.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 5,
+        "deep learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-20/README.md",
+      "standard_term": "梯度下降",
+      "variants": {
+        "梯度下降": 5,
+        "gradient descent": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-20/README.md",
+      "standard_term": "正则化",
+      "variants": {
+        "正则化": 5,
+        "regularization": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-21/README.md",
+      "standard_term": "正则化",
+      "variants": {
+        "正则化": 19,
+        "regularization": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-21/README.md",
+      "standard_term": "过拟合",
+      "variants": {
+        "过拟合": 13,
+        "overfitting": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-21/README.md",
+      "standard_term": "欠拟合",
+      "variants": {
+        "欠拟合": 1,
+        "underfitting": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-22/README.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 4,
+        "deep learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-22/README.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 11,
+        "neural network": 2,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-22/README.md",
+      "standard_term": "反向传播",
+      "variants": {
+        "反向传播": 7,
+        "backpropagation": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-22/README.md",
+      "standard_term": "卷积神经网络",
+      "variants": {
+        "卷积神经网络": 4,
+        "cnn": 2,
+        "convolutional neural network": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-22/README.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 1,
+        "attention": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-22/README.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 33,
+        "feature": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-22/README.md",
+      "standard_term": "卷积",
+      "variants": {
+        "卷积": 78,
+        "convolution": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-22/README.md",
+      "standard_term": "池化",
+      "variants": {
+        "池化": 26,
+        "pooling": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-23/README.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 14,
+        "neural network": 1,
+        "neural networks": 6
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-23/README.md",
+      "standard_term": "反向传播",
+      "variants": {
+        "反向传播": 9,
+        "backpropagation": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-23/README.md",
+      "standard_term": "循环神经网络",
+      "variants": {
+        "循环神经网络": 5,
+        "rnn": 4,
+        "recurrent neural network": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-23/README.md",
+      "standard_term": "长短期记忆",
+      "variants": {
+        "长短期记忆": 2,
+        "lstm": 11,
+        "long short-term memory": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-23/README.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 4,
+        "attention": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-24/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-24/README.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 5,
+        "attention": 37
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-24/README.md",
+      "standard_term": "预训练",
+      "variants": {
+        "预训练": 8,
+        "pretraining": 1,
+        "pre-training": 3
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-24/README.md",
+      "standard_term": "归一化",
+      "variants": {
+        "归一化": 1,
+        "normalization": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-25/README.md",
+      "standard_term": "学习率",
+      "variants": {
+        "学习率": 10,
+        "learning rate": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-25/README.md",
+      "standard_term": "嵌入",
+      "variants": {
+        "嵌入": 3,
+        "词嵌入": 2
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-25/README.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 8,
+        "feature": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-25/README.md",
+      "standard_term": "微调",
+      "variants": {
+        "微调": 43,
+        "fine-tuning": 5
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-25/README.md",
+      "standard_term": "预训练",
+      "variants": {
+        "预训练": 41,
+        "pretraining": 1,
+        "pre-training": 5
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-26/README.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 1,
+        "attention": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-26/README.md",
+      "standard_term": "自注意力",
+      "variants": {
+        "自注意力": 1,
+        "self-attention": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-26/README.md",
+      "standard_term": "微调",
+      "variants": {
+        "微调": 1,
+        "fine-tuning": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-27/README.md",
+      "standard_term": "嵌入",
+      "variants": {
+        "嵌入": 8,
+        "embedding": 1,
+        "词嵌入": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-27/README.md",
+      "standard_term": "预训练",
+      "variants": {
+        "预训练": 3,
+        "pre-training": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-30/README.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 4,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-36/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 4,
+        "machine learning": 6
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-36/README.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 2,
+        "目标函数": 2
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-37/README.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 2,
+        "machine learning": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-37/README.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 12,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-37/README.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 1,
+        "目标函数": 3
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-37/README.md",
+      "standard_term": "部署",
+      "variants": {
+        "部署": 4,
+        "deployment": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-38/research-notes.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 1,
+        "attention": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-39/research-notes.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 6,
+        "feature": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-40/README.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 4,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-41/README.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 17,
+        "feature": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-42/README.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 4,
+        "neural networks": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-42/README.md",
+      "standard_term": "循环神经网络",
+      "variants": {
+        "循环神经网络": 1,
+        "rnn": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-42/README.md",
+      "standard_term": "嵌入",
+      "variants": {
+        "嵌入": 8,
+        "embedding": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-44/README.md",
+      "standard_term": "微调",
+      "variants": {
+        "微调": 1,
+        "fine-tuning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-01-what-is-learning.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 30,
+        "machine learning": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-01-what-is-learning.md",
+      "standard_term": "深度学习",
+      "variants": {
+        "深度学习": 1,
+        "deep learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-01-what-is-learning.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 3,
+        "loss function": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-02-seeing-data.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 14,
+        "machine learning": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-02-seeing-data.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 1,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-02-seeing-data.md",
+      "standard_term": "嵌入",
+      "variants": {
+        "嵌入": 1,
+        "词嵌入": 1
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-02-seeing-data.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 64,
+        "feature": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-02-seeing-data.md",
+      "standard_term": "归一化",
+      "variants": {
+        "归一化": 5,
+        "normalization": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-09.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 2,
+        "machine learning": 5
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-16-perceptron.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-16-perceptron.md",
+      "standard_term": "感知机",
+      "variants": {
+        "感知机": 44,
+        "perceptron": 7
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-16-perceptron.md",
+      "standard_term": "多层感知机",
+      "variants": {
+        "多层感知机": 4,
+        "mlp": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-16-perceptron.md",
+      "standard_term": "反向传播",
+      "variants": {
+        "反向传播": 3,
+        "backpropagation": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-32/content.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 2,
+        "machine learning": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-32/content.md",
+      "standard_term": "人工智能",
+      "variants": {
+        "人工智能": 1,
+        "ai": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-32/content.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 8,
+        "neural networks": 5
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-32/content.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 8,
+        "attention": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-32/content.md",
+      "standard_term": "嵌入",
+      "variants": {
+        "嵌入": 4,
+        "embedding": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-32/content.md",
+      "standard_term": "预训练",
+      "variants": {
+        "预训练": 2,
+        "pre-training": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-32/content.md",
+      "standard_term": "池化",
+      "variants": {
+        "池化": 6,
+        "pooling": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter09_decision_tree/CONTENT.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 5
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter23_rnn_sequences.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 14,
+        "neural network": 1,
+        "neural networks": 6
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter23_rnn_sequences.md",
+      "standard_term": "反向传播",
+      "variants": {
+        "反向传播": 9,
+        "backpropagation": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter23_rnn_sequences.md",
+      "standard_term": "循环神经网络",
+      "variants": {
+        "循环神经网络": 5,
+        "rnn": 4,
+        "recurrent neural network": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter23_rnn_sequences.md",
+      "standard_term": "长短期记忆",
+      "variants": {
+        "长短期记忆": 2,
+        "lstm": 11,
+        "long short-term memory": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter23_rnn_sequences.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 4,
+        "attention": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter33-temporal-forecasting/chapter-33.md",
+      "standard_term": "注意力机制",
+      "variants": {
+        "注意力机制": 3,
+        "attention": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter33-temporal-forecasting/chapter-33.md",
+      "standard_term": "自注意力",
+      "variants": {
+        "自注意力": 4,
+        "self-attention": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter35-self-supervised-learning.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 2,
+        "machine learning": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter35-self-supervised-learning.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 8,
+        "目标函数": 2
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter35-self-supervised-learning.md",
+      "standard_term": "嵌入",
+      "variants": {
+        "嵌入": 1,
+        "embedding": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter35-self-supervised-learning.md",
+      "standard_term": "预训练",
+      "variants": {
+        "预训练": 17,
+        "pretraining": 1,
+        "pre-training": 7
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter37-NAS.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 2,
+        "machine learning": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter37-NAS.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 12,
+        "neural networks": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter37-NAS.md",
+      "standard_term": "损失函数",
+      "variants": {
+        "损失函数": 1,
+        "目标函数": 3
+      },
+      "has_error": true
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter37-NAS.md",
+      "standard_term": "部署",
+      "variants": {
+        "部署": 4,
+        "deployment": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter50_probabilistic_graphical_models.md",
+      "standard_term": "反向传播",
+      "variants": {
+        "反向传播": 1,
+        "bp": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter50_probabilistic_graphical_models.md",
+      "standard_term": "推理",
+      "variants": {
+        "推理": 2,
+        "inference": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter50_probabilistic_graphical_models.md",
+      "standard_term": "归一化",
+      "variants": {
+        "归一化": 4,
+        "bn": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter55-continual-learning-part1.md",
+      "standard_term": "正则化",
+      "variants": {
+        "正则化": 3,
+        "regularization": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter55-continual-learning-part2.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 6,
+        "neural networks": 5
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter57/chapter57.md",
+      "standard_term": "超参数",
+      "variants": {
+        "超参数": 22,
+        "hyperparameter": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter59-mlops/OUTLINE.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 2,
+        "machine learning": 2,
+        "ml": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter59-mlops/OUTLINE.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 11,
+        "feature": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter59_mlops.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 14,
+        "machine learning": 11,
+        "ml": 4
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter59_mlops.md",
+      "standard_term": "特征",
+      "variants": {
+        "特征": 24,
+        "feature": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter59_mlops.md",
+      "standard_term": "部署",
+      "variants": {
+        "部署": 22,
+        "deployment": 2
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter60_complete_project.md",
+      "standard_term": "嵌入",
+      "variants": {
+        "嵌入": 6,
+        "embedding": 3
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter_10_svm.md",
+      "standard_term": "机器学习",
+      "variants": {
+        "机器学习": 1,
+        "machine learning": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter_10_svm.md",
+      "standard_term": "正则化",
+      "variants": {
+        "正则化": 3,
+        "regularization": 1
+      },
+      "has_error": false
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/memory/chapter55-plan.md",
+      "standard_term": "神经网络",
+      "variants": {
+        "神经网络": 3,
+        "neural networks": 7
+      },
+      "has_error": false
+    }
+  ],
+  "files_analyzed": [
+    "/root/.openclaw/workspace/ml-book-for-kids/book/chapter21_regularization.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/book/chapter21_regularization_part1.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-03-prediction-and-loss.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-04-gradient-descent.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-04/chapter-04.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-05-python-warmup.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-06-knn.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-07-linear-regression.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-08.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-09-decision-tree/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-09.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-11-naive-bayes/CONTENT.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-11-naive-bayes/exercises.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-12-ensemble/manuscript.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-13-kmeans/manuscript.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-14-hierarchical/manuscript.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-14/chapter-14.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-15-dimensionality-reduction/chapter-15.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-16-perceptron.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-16-perceptron/chapter-16-perceptron.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-17-multilayer-neural-network.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-19-activation-functions/chapter-19.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-24-attention-transformer/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-30-reinforcement-learning.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-43-multimodal-learning.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-46-ai-agents.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-53-gnn-geometric-deep-learning.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter-59-mlops.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter12/chapter12.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter14_hierarchical_dbscan/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter18_backpropagation.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter20_optimizer.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter21_regularization.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter22-cnn/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter22-cnn/code/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter24_transformer/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter24_transformer/chapter24_attention_transformer.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter25_pretraining_finetuning.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter26_llm_prompting.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter27_rag/chapter27_rag.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter30_reinforcement_learning.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter31-deep-rl-advanced.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter33.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter34.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter34_nas.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter36_federated_learning.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter38_diffusion_models.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter39-reinforcement-learning/plan.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter46_ai_agents.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter47/chapter47.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter47/plan.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter48/chapter48.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter49/chapter49.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter50-plan.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter51-causal-inference.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter51.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter51_causal_inference.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter52-advanced-generative-models.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter54-neuro-symbolic.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter54-plan.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter55-plan.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter56-nas-advanced/chapter56-part1.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter56-nas-advanced/chapter56-part2.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter56-plan.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter57/chapter57-plan.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter57/chapter57.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter58/chapter58-plan.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter58/chapter58.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter59-ai-for-science-plan.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter59_mlops.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter_22_cnn/chapter_22_cnn.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapter_28_multimodal.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-01/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-02/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-03/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-04/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-05/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-06/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-07/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-08/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-09/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-12/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-14/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-15/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-16/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-17/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-18/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-19/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-20/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-21/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-22/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-23/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-24/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-25/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-26/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-27/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-29/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-30/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-36/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-37/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-38/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-38/research-notes.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-39/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-39/research-notes.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-40/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-41/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-42/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-44/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-45/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-01-what-is-learning.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-02-seeing-data.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-09.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-16-perceptron.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter-32/content.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter09_decision_tree/CONTENT.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter23_rnn_sequences.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter29_generative_models/exercises.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter29_generative_models/main.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter29_generative_models/references.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter33-temporal-forecasting/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter33-temporal-forecasting/chapter-33.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter35-self-supervised-learning.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter36-federated-learning-plan.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter36-federated-learning/README.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter36-federated-learning/chapter36-part1.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter37-NAS.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter50_probabilistic_graphical_models.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter55-continual-learning-part1.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter55-continual-learning-part2.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter57/chapter57.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter59-mlops/OUTLINE.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter59_mlops.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter60_complete_project.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter_10_svm.md",
+    "/root/.openclaw/workspace/ml-book-for-kids/memory/chapter55-plan.md"
+  ]
+}

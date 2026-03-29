@@ -1,0 +1,69 @@
+% ML教材 LaTeX 设置
+% 注意：此文件通过 -H 选项包含在pandoc生成的文档中
+
+% 中文支持
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+
+% 页面设置
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% 数学公式
+\usepackage{amsmath,amssymb,amsthm}
+
+% 图形
+\usepackage{graphicx}
+\graphicspath{{./}{./images/}}
+
+% 代码高亮设置
+\usepackage{xcolor}
+
+% 定义代码样式
+\definecolor{codebg}{RGB}{248,248,248}
+\definecolor{codeframe}{RGB}{200,200,200}
+\definecolor{commentcolor}{RGB}{0,128,0}
+\definecolor{keywordcolor}{RGB}{0,0,255}
+\definecolor{stringcolor}{RGB}{163,21,21}
+
+\lstset{
+    backgroundcolor=\color{codebg},
+    frame=single,
+    rulecolor=\color{codeframe},
+    basicstyle=\small\ttfamily,
+    keywordstyle=\color{keywordcolor}\bfseries,
+    commentstyle=\color{commentcolor}\itshape,
+    stringstyle=\color{stringcolor},
+    showstringspaces=false,
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=4,
+    captionpos=b,
+    xleftmargin=1em,
+    xrightmargin=1em,
+    aboveskip=1em,
+    belowskip=1em
+}
+
+% 页眉页脚
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{\small 机器学习与深度学习：从小学生到大师}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% 章节标题样式
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% 目录深度
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}

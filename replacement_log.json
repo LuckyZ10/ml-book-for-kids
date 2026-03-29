@@ -1,0 +1,944 @@
+{
+  "files_processed": 146,
+  "files_modified": 37,
+  "total_replacements": 117,
+  "file_logs": [
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/TERMINOLOGY_STANDARD.md",
+      "replacements": 1,
+      "changes": [
+        {
+          "line": 71,
+          "original": "感知器",
+          "replacement": "感知机",
+          "rule": "感知器 → 感知机"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-12-ensemble/manuscript.md",
+      "replacements": 1,
+      "changes": [
+        {
+          "line": 185,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-13-kmeans/manuscript.md",
+      "replacements": 5,
+      "changes": [
+        {
+          "line": 99,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 130,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 136,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 173,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 188,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-14/chapter-14.md",
+      "replacements": 1,
+      "changes": [
+        {
+          "line": 263,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-15-dimensionality-reduction/chapter-15.md",
+      "replacements": 2,
+      "changes": [
+        {
+          "line": 328,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 500,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-17-multilayer-neural-network.md",
+      "replacements": 1,
+      "changes": [
+        {
+          "line": 514,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-30-reinforcement-learning.md",
+      "replacements": 3,
+      "changes": [
+        {
+          "line": 1449,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1466,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1206,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-43-multimodal-learning.md",
+      "replacements": 4,
+      "changes": [
+        {
+          "line": 86,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 93,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 910,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 148,
+          "original": "词嵌入",
+          "replacement": "嵌入",
+          "rule": "词嵌入 → 嵌入"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter-59-mlops.md",
+      "replacements": 1,
+      "changes": [
+        {
+          "line": 77,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter21_regularization.md",
+      "replacements": 1,
+      "changes": [
+        {
+          "line": 1764,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter22-cnn/README.md",
+      "replacements": 2,
+      "changes": [
+        {
+          "line": 1207,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 1499,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter25_pretraining_finetuning.md",
+      "replacements": 3,
+      "changes": [
+        {
+          "line": 9,
+          "original": "词嵌入",
+          "replacement": "嵌入",
+          "rule": "词嵌入 → 嵌入"
+        },
+        {
+          "line": 17,
+          "original": "词嵌入",
+          "replacement": "嵌入",
+          "rule": "词嵌入 → 嵌入"
+        },
+        {
+          "line": 1394,
+          "original": "词嵌入",
+          "replacement": "嵌入",
+          "rule": "词嵌入 → 嵌入"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter31-deep-rl-advanced.md",
+      "replacements": 16,
+      "changes": [
+        {
+          "line": 1855,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1935,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 3153,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 3158,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 191,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 389,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 593,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 1124,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 1904,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 2010,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 2011,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 2170,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 2214,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 2929,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 2933,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 2962,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter34_nas.md",
+      "replacements": 3,
+      "changes": [
+        {
+          "line": 698,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 970,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 606,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter36_federated_learning.md",
+      "replacements": 3,
+      "changes": [
+        {
+          "line": 89,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 527,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1628,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter38_diffusion_models.md",
+      "replacements": 1,
+      "changes": [
+        {
+          "line": 417,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter39-reinforcement-learning/plan.md",
+      "replacements": 3,
+      "changes": [
+        {
+          "line": 83,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 114,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 162,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter57/chapter57.md",
+      "replacements": 13,
+      "changes": [
+        {
+          "line": 194,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 274,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 478,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 480,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 487,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 489,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1099,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1297,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1465,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1468,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1573,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1644,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1777,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter_22_cnn/chapter_22_cnn.md",
+      "replacements": 1,
+      "changes": [
+        {
+          "line": 1471,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapter_28_multimodal.md",
+      "replacements": 7,
+      "changes": [
+        {
+          "line": 131,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 237,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 258,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 304,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 884,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 466,
+          "original": "词嵌入",
+          "replacement": "嵌入",
+          "rule": "词嵌入 → 嵌入"
+        },
+        {
+          "line": 495,
+          "original": "词嵌入",
+          "replacement": "嵌入",
+          "rule": "词嵌入 → 嵌入"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter29_generative_models/main.md",
+      "replacements": 1,
+      "changes": [
+        {
+          "line": 104,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter35-self-supervised-learning.md",
+      "replacements": 2,
+      "changes": [
+        {
+          "line": 110,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 194,
+          "original": "词嵌入",
+          "replacement": "嵌入",
+          "rule": "词嵌入 → 嵌入"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter36-federated-learning/chapter36-part1.md",
+      "replacements": 2,
+      "changes": [
+        {
+          "line": 73,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 821,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter37-NAS.md",
+      "replacements": 2,
+      "changes": [
+        {
+          "line": 241,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 264,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter57/chapter57.md",
+      "replacements": 4,
+      "changes": [
+        {
+          "line": 94,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 400,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 448,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 472,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter59_mlops.md",
+      "replacements": 1,
+      "changes": [
+        {
+          "line": 975,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters/chapter_10_svm.md",
+      "replacements": 4,
+      "changes": [
+        {
+          "line": 187,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 243,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 308,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 441,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-14/README.md",
+      "replacements": 1,
+      "changes": [
+        {
+          "line": 263,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-15/README.md",
+      "replacements": 2,
+      "changes": [
+        {
+          "line": 328,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 500,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-17/README.md",
+      "replacements": 1,
+      "changes": [
+        {
+          "line": 514,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-22/README.md",
+      "replacements": 2,
+      "changes": [
+        {
+          "line": 1207,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 1499,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-25/README.md",
+      "replacements": 3,
+      "changes": [
+        {
+          "line": 9,
+          "original": "词嵌入",
+          "replacement": "嵌入",
+          "rule": "词嵌入 → 嵌入"
+        },
+        {
+          "line": 17,
+          "original": "词嵌入",
+          "replacement": "嵌入",
+          "rule": "词嵌入 → 嵌入"
+        },
+        {
+          "line": 1394,
+          "original": "词嵌入",
+          "replacement": "嵌入",
+          "rule": "词嵌入 → 嵌入"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-30/README.md",
+      "replacements": 3,
+      "changes": [
+        {
+          "line": 1449,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1466,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1206,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-36/README.md",
+      "replacements": 5,
+      "changes": [
+        {
+          "line": 985,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1423,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 2524,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 73,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 821,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-37/README.md",
+      "replacements": 2,
+      "changes": [
+        {
+          "line": 241,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 264,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/chapters-unified/chapter-40/README.md",
+      "replacements": 2,
+      "changes": [
+        {
+          "line": 380,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 419,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    },
+    {
+      "file": "/root/.openclaw/workspace/ml-book-for-kids/第五十九章_负责任的AI与AI伦理_技术向善的智慧.md",
+      "replacements": 8,
+      "changes": [
+        {
+          "line": 142,
+          "original": "目标函数",
+          "replacement": "损失函数",
+          "rule": "目标函数 → 损失函数"
+        },
+        {
+          "line": 1923,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 1924,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 1929,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 1953,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 1954,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 2217,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        },
+        {
+          "line": 2235,
+          "original": "批次",
+          "replacement": "批量",
+          "rule": "批次 → 批量"
+        }
+      ]
+    }
+  ],
+  "rule_stats": {
+    "代价函数 → 损失函数": 0,
+    "目标函数 → 损失函数": 61,
+    "批次 → 批量": 45,
+    "感知器 → 感知机": 1,
+    "词嵌入 → 嵌入": 10,
+    "pretraining → pre-training": 0,
+    "Pretraining → Pre-training": 0,
+    "PRETRAINING → PRE-TRAINING": 0,
+    "finetuning → fine-tuning": 0,
+    "Finetuning → Fine-tuning": 0,
+    "FINETUNING → FINE-TUNING": 0
+  }
+}
