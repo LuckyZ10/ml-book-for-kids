@@ -540,3 +540,294 @@ van der Maaten, L. (2014). Accelerating t-SNE using tree-based algorithms. *The 
 *本章完*
 
 **下一章预告**：第十六章将介绍神经网络的基石——感知机，我们将从零开始构建第一个神经网络！
+
+---
+
+## 附录A：PCA的数学推导
+
+### A.1 方差最大化视角
+
+PCA的目标是找到投影方向，使得投影后的数据方差最大。
+
+**问题设定**：
+给定中心化数据$X \in \mathbb{R}^{n \times d}$，寻找单位向量$w$，使得投影$z = Xw$的方差最大。
+
+$$\max_{w} \text{Var}(z) = \max_{w} w^T \Sigma w$$
+
+约束：$w^T w = 1$
+
+**拉格朗日函数**：
+$$\mathcal{L}(w, \lambda) = w^T \Sigma w - \lambda(w^T w - 1)$$
+
+**求导并令为0**：
+$$\frac{\partial \mathcal{L}}{\partial w} = 2\Sigma w - 2\lambda w = 0$$
+
+得到：$\Sigma w = \lambda w$
+
+这就是特征值方程！$w$是协方差矩阵的特征向量，$\lambda$是对应的特征值。
+
+### A.2 重建误差最小化视角
+
+PCA也可以看作最小化重建误差。
+
+**问题设定**：
+用$k$维基近似原始$d$维数据，最小化平方重建误差。
+
+$$\min_{W} \sum_{i=1}^{n} \|x_i - WW^T x_i\|^2$$
+
+其中$W \in \mathbb{R}^{d \times k}$，列向量正交。
+
+**等价性证明**：
+最小化重建误差等价于最大化保留的方差，两种视角得到相同解。
+
+### A.3 特征值分解 vs SVD
+
+**协方差矩阵方法**：
+$$\Sigma = \frac{1}{n} X^T X = V \Lambda V^T$$
+
+**SVD方法**：
+$$X = U \Sigma V^T$$
+
+PCA的主成分就是$V$的列向量。
+
+**计算复杂度**：
+- 协方差方法：$O(nd^2 + d^3)$
+- SVD方法：$O(\min(nd^2, n^2d))$
+
+对于$n \gg d$，SVD更稳定。
+
+---
+
+## 附录B：核PCA
+
+### B.1 动机
+
+标准PCA是线性的，无法捕捉非线性结构。核PCA通过核技巧解决这个问题。
+
+### B.2 核技巧
+
+不需要显式计算映射$\phi(x)$，只需要核函数：
+$$K(x, x') = \phi(x)^T \phi(x')$$
+
+### B.3 核PCA算法
+
+1. 计算核矩阵$K_{ij} = K(x_i, x_j)$
+2. 中心化核矩阵：$K' = K - 1_n K - K 1_n + 1_n K 1_n$
+3. 对$K'$进行特征分解
+4. 投影：$z_i = \sum_{j=1}^{n} \alpha_j K(x_j, x_i)$
+
+### B.4 常用核函数
+
+**RBF核**：
+$$K(x, x') = \exp\left(-\frac{\|x - x'\|^2}{2\sigma^2}\right)$$
+
+**多项式核**：
+$$K(x, x') = (x^T x' + c)^d$$
+
+---
+
+## 附录C：t-SNE详解
+
+### C.1 困惑度（Perplexity）
+
+困惑度是t-SNE的关键参数：
+$$\text{Perp}(P_i) = 2^{H(P_i)}$$
+
+其中$H(P_i)$是香农熵。
+
+**物理意义**：
+- 困惑度≈有效邻居数
+- 典型值：5-50
+
+**调参建议**：
+- 小数据集（<1000）：perplexity=5-10
+- 中数据集：perplexity=30
+- 大数据集：perplexity=50
+
+### C.2 t-SNE vs PCA
+
+| 特性 | PCA | t-SNE |
+|:---:|:---:|:---:|
+| 线性/非线性 | 线性 | 非线性 |
+| 保留结构 | 全局 | 局部 |
+| 计算复杂度 | 低 | 高 |
+| 确定性 | 确定 | 随机 |
+| 适用场景 | 预处理、可视化 | 可视化 |
+
+### C.3 t-SNE的陷阱
+
+1. **簇大小无意义**：t-SNE会"均衡"簇的大小
+2. **距离无意义**：局部距离有意义，全局距离无意义
+3. **随机性**：不同运行可能得到不同结果
+4. **超参数敏感**：perplexity选择很重要
+
+---
+
+## 附录D：其他降维方法
+
+### D.1 线性判别分析（LDA）
+
+**目标**：最大化类间距离，最小化类内距离
+
+**适用**：有监督降维（需要标签）
+
+### D.2 多维缩放（MDS）
+
+**目标**：保持样本间距离
+
+**优化**：
+$$\min_{Y} \sum_{i<j} (d_{ij} - \|y_i - y_j\|)^2$$
+
+### D.3 等距映射（Isomap）
+
+**思想**：用测地距离代替欧氏距离
+
+**步骤**：
+1. 构建k近邻图
+2. 计算最短路径（测地距离）
+3. MDS降维
+
+### D.4 局部线性嵌入（LLE）
+
+**思想**：保持局部线性关系
+
+**优化**：
+$$\min_{Y} \sum_i \|y_i - \sum_j W_{ij} y_j\|^2$$
+
+### D.5 自编码器（Autoencoder）
+
+**神经网络方法**：
+- 编码器：$z = f(x)$
+- 解码器：$\hat{x} = g(z)$
+- 目标：$\min \|x - g(f(x))\|^2$
+
+---
+
+## 附录E：实战技巧
+
+### E.1 数据预处理
+
+**必须标准化**：
+```python
+from sklearn.preprocessing import StandardScaler
+X_scaled = StandardScaler().fit_transform(X)
+```
+
+**原因**：PCA对尺度敏感，大尺度特征会主导主成分。
+
+### E.2 选择主成分数
+
+**方法1： explained_variance_ratio_**
+```python
+pca = PCA().fit(X)
+cumsum = np.cumsum(pca.explained_variance_ratio_)
+n_components = np.argmax(cumsum >= 0.95) + 1  # 保留95%方差
+```
+
+**方法2：Kaiser准则**
+保留特征值>1的主成分
+
+**方法3：碎石图**
+找"肘部"
+
+### E.3 处理缺失值
+
+**方法**：
+1. 插补后PCA
+2. 概率PCA（PPCA）
+3. 迭代PCA
+
+### E.4 大数据集
+
+**随机SVD**：
+```python
+from sklearn.decomposition import PCA
+pca = PCA(n_components=50, svd_solver='randomized')
+```
+
+**增量PCA**：
+```python
+from sklearn.decomposition import IncrementalPCA
+ipca = IncrementalPCA(n_components=50)
+for batch in batches:
+    ipca.partial_fit(batch)
+```
+
+---
+
+## 附录F：应用场景
+
+### F.1 图像压缩
+
+**人脸图像（Eigenfaces）**：
+- 每张脸 = 加权组合 of 特征脸
+- 压缩比：100:1
+
+### F.2 基因表达分析
+
+**问题**：数千基因，几十样本
+**应用**：找到关键"特征基因"
+
+### F.3 金融风控
+
+**信用评分**：
+- 输入：数百个财务指标
+- PCA降维 → 简化模型
+
+### F.4 推荐系统
+
+**矩阵分解 = PCA**：
+- 用户-物品评分矩阵
+- SVD分解得到隐因子
+
+---
+
+## 附录G：面试常见问题
+
+**Q1：PCA和特征选择有什么区别？**
+
+A：PCA是特征提取（创造新特征），特征选择是从原有特征中选子集。
+
+**Q2：PCA对异常值敏感吗？**
+
+A：敏感。因为基于方差，异常值会显著影响协方差矩阵。可用稳健PCA。
+
+**Q3：为什么PCA前需要标准化？**
+
+A：避免大尺度特征主导。标准化使各特征同等重要。
+
+**Q4：PCA可以处理缺失值吗？**
+
+A：标准PCA不行。可用概率PCA或先插补。
+
+**Q5：t-SNE和PCA怎么选？**
+
+A：PCA用于预处理/线性降维；t-SNE仅用于可视化。
+
+---
+
+## 附录H：历史时间线
+
+| 年份 | 里程碑 | 人物 |
+|:---:|:---|:---|
+| 1901 | PCA创立 | Karl Pearson |
+| 1933 | 现代PCA形式 | Harold Hotelling |
+| 1960s | MDS发展 | Shepard, Kruskal |
+| 2000 | Isomap | Tenenbaum et al. |
+| 2000 | LLE | Roweis, Saul |
+| 2008 | t-SNE | van der Maaten, Hinton |
+| 2018 | UMAP | McInnes et al. |
+
+---
+
+## 总结
+
+降维是机器学习中不可或缺的工具。
+
+**核心要点**：
+- PCA：线性降维，保留最大方差
+- t-SNE：非线性可视化，保留局部结构
+- 选择取决于目标：重建？可视化？分类？
+
+**记住**：降维不是目的，是手段。理解数据才是终极目标。
+

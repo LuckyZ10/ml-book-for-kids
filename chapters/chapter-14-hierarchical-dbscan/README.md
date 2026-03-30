@@ -529,6 +529,263 @@ $$DB = \frac{1}{k} \sum_{i=1}^{k} \max_{j \neq i} \left(\frac{s_i + s_j}{d_{ij}}
 
 ---
 
+## 附录A：数学推导详解
+
+### A.1 Lance-Williams递推公式完整推导
+
+Lance-Williams公式是层次聚类的核心数学工具，它让我们能够递推计算合并后的簇间距离，而不用重新计算所有点对的距离。
+
+**问题设定**：
+- 簇 $C_i$ 和 $C_j$ 合并为新簇 $C_k$
+- 需要计算 $C_k$ 与任意其他簇 $C_m$ 的距离 $d(C_k, C_m)$
+
+**通用递推公式**：
+
+$$d(C_k, C_m) = \alpha_i d(C_i, C_m) + \alpha_j d(C_j, C_m) + \beta d(C_i, C_j) + \gamma |d(C_i, C_m) - d(C_j, C_m)|$$
+
+**四种链接方法的参数**：
+
+| 链接方法 | $\alpha_i$ | $\alpha_j$ | $\beta$ | $\gamma$ |
+|:---:|:---:|:---:|:---:|:---:|
+| 单链接 | $\frac{1}{2}$ | $\frac{1}{2}$ | $0$ | $-\frac{1}{2}$ |
+| 全链接 | $\frac{1}{2}$ | $\frac{1}{2}$ | $0$ | $+\frac{1}{2}$ |
+| 平均链接 | $\frac{n_i}{n_i+n_j}$ | $\frac{n_j}{n_i+n_j}$ | $0$ | $0$ |
+| Ward法 | $\frac{n_i+n_m}{n_i+n_j+n_m}$ | $\frac{n_j+n_m}{n_i+n_j+n_m}$ | $\frac{-n_m}{n_i+n_j+n_m}$ | $0$ |
+
+**单链接的推导**：
+
+$$d_{\text{single}}(C_k, C_m) = \min_{x \in C_i \cup C_j, y \in C_m} d(x, y)$$
+
+$$= \min\left\{\min_{x \in C_i, y \in C_m} d(x, y), \min_{x \in C_j, y \in C_m} d(x, y)\right\}$$
+
+$$= \min\{d(C_i, C_m), d(C_j, C_m)\}$$
+
+$$= \frac{1}{2}d(C_i, C_m) + \frac{1}{2}d(C_j, C_m) - \frac{1}{2}|d(C_i, C_m) - d(C_j, C_m)|$$
+
+**Ward法的推导**：
+
+Ward法使用平方欧氏距离，最小化合并导致的SSE增量：
+
+$$\Delta(C_i, C_j) = \frac{n_i n_j}{n_i + n_j} \|\mu_i - \mu_j\|^2$$
+
+其中 $\mu_i$ 和 $\mu_j$ 分别是两个簇的质心。
+
+合并后的新质心：
+$$\mu_k = \frac{n_i \mu_i + n_j \mu_j}{n_i + n_j}$$
+
+### A.2 DBSCAN密度可达性证明
+
+**定理**：如果 $p$ 是核心点，$q$ 是从 $p$ 密度可达的，那么 $q$ 属于以 $p$ 为核心的同一个簇。
+
+**证明**：
+
+设存在点链 $p_1, p_2, ..., p_n$，其中 $p_1 = p$, $p_n = q$，且每个 $p_{i+1}$ 都从 $p_i$ 直接密度可达。
+
+由直接密度可达的定义：
+$$p_{i+1} \in N_\varepsilon(p_i) \text{ 且 } |N_\varepsilon(p_i)| \geq \text{MinPts}$$
+
+因此 $p_i$ 都是核心点，这条链上的所有点都属于同一个簇。
+
+### A.3 轮廓系数的性质
+
+**性质1**：$-1 \leq s(i) \leq 1$
+
+**证明**：
+$$s(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}}$$
+
+- 当 $a(i) \to 0$ 时，$s(i) \to 1$（完美聚类）
+- 当 $a(i) = b(i)$ 时，$s(i) = 0$（边界情况）
+- 当 $b(i) \to 0$ 时，$s(i) \to -1$（错误聚类）
+
+**性质2**：全局轮廓系数是各点轮廓系数的平均
+
+$$\text{Silhouette}_{\text{avg}} = \frac{1}{n} \sum_{i=1}^{n} s(i)$$
+
+### A.4 复杂度分析
+
+**AGNES时间复杂度**：
+- 朴素实现：$O(n^3)$ — 每次合并需要重新计算所有簇间距离
+- 优化实现（优先队列）：$O(n^2 \log n)$
+- 空间复杂度：$O(n^2)$ — 存储距离矩阵
+
+**DBSCAN时间复杂度**：
+- 朴素实现：$O(n^2)$ — 对每个点计算ε-邻域
+- 空间索引（KD-Tree/R-Tree）：$O(n \log n)$
+- 空间复杂度：$O(n)$ — 仅需存储点的标签
+
+---
+
+## 附录B：算法伪代码
+
+### B.1 AGNES算法伪代码
+
+```
+算法: AGNES(D, k)
+输入: 数据集 D = {x_1, x_2, ..., x_n}, 目标簇数 k
+输出: 聚类结果 C = {C_1, C_2, ..., C_k}
+
+1. 初始化: 每个点作为一个簇
+   C = {{x_1}, {x_2}, ..., {x_n}}
+   
+2. 计算初始距离矩阵 M
+   对于每对簇 C_i, C_j:
+       M[i,j] = d(C_i, C_j)  // 使用选定的链接方法
+
+3. 当 |C| > k 时:
+   a. 在 M 中找到距离最近的两个簇 C_i, C_j
+   b. 合并: C_new = C_i ∪ C_j
+   c. 从 C 中移除 C_i 和 C_j
+   d. 将 C_new 加入 C
+   e. 更新距离矩阵 M:
+      对于 C 中的每个其他簇 C_m:
+          M[new, m] = LanceWilliams(C_new, C_m, M)
+
+4. 返回 C
+```
+
+### B.2 DBSCAN算法伪代码
+
+```
+算法: DBSCAN(D, ε, MinPts)
+输入: 数据集 D, 半径 ε, 最小点数 MinPts
+输出: 聚类标签 labels, 噪声点集合 Noise
+
+1. 初始化: 所有点标记为未访问
+   labels = [-1] * n
+   cluster_id = 0
+
+2. 对于 D 中的每个未访问点 p:
+   a. 标记 p 为已访问
+   b. neighbors = ε-邻域查询(p)
+   c. 如果 |neighbors| < MinPts:
+      标记 p 为噪声
+   d. 否则:
+      开始新簇: cluster_id += 1
+      labels[p] = cluster_id
+      种子集 seeds = neighbors \ {p}
+      
+      当 seeds 不为空:
+         q = seeds.pop()
+         如果 q 是未访问:
+            标记 q 为已访问
+            neighbors_q = ε-邻域查询(q)
+            如果 |neighbors_q| >= MinPts:
+               seeds = seeds ∪ neighbors_q
+         如果 q 是噪声或未分配:
+            labels[q] = cluster_id
+
+3. 返回 labels
+```
+
+---
+
+## 附录C：Python实现要点
+
+### C.1 距离矩阵计算优化
+
+```python
+import numpy as np
+from scipy.spatial.distance import pdist, squareform
+
+def compute_distance_matrix(X):
+    """
+    计算距离矩阵的优化方法
+    时间复杂度: O(n^2)
+    """
+    # 方法1: 使用scipy (推荐)
+    condensed_dist = pdist(X, metric='euclidean')
+    dist_matrix = squareform(condensed_dist)
+    return dist_matrix
+    
+    # 方法2: 向量化计算
+    # diff = X[:, np.newaxis, :] - X[np.newaxis, :, :]
+    # dist_matrix = np.sqrt(np.sum(diff**2, axis=2))
+    # return dist_matrix
+```
+
+### C.2 优先队列优化AGNES
+
+```python
+import heapq
+
+def agnes_optimized(X, k, linkage='single'):
+    """
+    使用优先队列优化的AGNES
+    时间复杂度: O(n^2 log n)
+    """
+    n = len(X)
+    # 计算初始距离矩阵
+    dist_matrix = compute_distance_matrix(X)
+    
+    # 初始化优先队列
+    heap = []
+    for i in range(n):
+        for j in range(i+1, n):
+            heapq.heappush(heap, (dist_matrix[i,j], i, j))
+    
+    # 并查集跟踪簇归属
+    parent = list(range(n))
+    
+    # ... 合并逻辑
+```
+
+### C.3 DBSCAN的空间索引优化
+
+```python
+from sklearn.neighbors import KDTree
+
+def dbscan_optimized(X, eps, min_pts):
+    """
+    使用KD-Tree加速的DBSCAN
+    时间复杂度: O(n log n) 平均情况
+    """
+    tree = KDTree(X)
+    n = len(X)
+    labels = np.full(n, -1)  # -1表示未分类
+    visited = np.zeros(n, dtype=bool)
+    
+    cluster_id = 0
+    for i in range(n):
+        if visited[i]:
+            continue
+            
+        # KD-Tree快速查询ε-邻域
+        neighbors = tree.query_radius([X[i]], r=eps)[0]
+        
+        if len(neighbors) < min_pts:
+            labels[i] = -1  # 噪声
+            visited[i] = True
+        else:
+            # 扩展簇...
+            pass
+    
+    return labels
+```
+
+---
+
+## 附录D：与其他聚类算法的对比
+
+| 特性 | K-Means | 层次聚类 | DBSCAN | GMM |
+|:---:|:---:|:---:|:---:|:---:|
+| **时间复杂度** | O(n×k×i) | O(n²)~O(n³) | O(n log n) | O(n×k×i) |
+| **空间复杂度** | O(n+k) | O(n²) | O(n) | O(n+k) |
+| **需指定K** | ✅ 必须 | ❌ 不需要 | ❌ 不需要 | ✅ 必须 |
+| **形状适应** | 球形 | 任意 | 任意 | 椭圆形 |
+| **噪声处理** | ❌ 不能 | ❌ 不能 | ✅ 自动识别 | ❌ 不能 |
+| **可解释性** | 中 | 高（树状图） | 中 | 低 |
+| **大数据集** | ✅ 适合 | ❌ 不适合 | ⚠️ 中等 | ✅ 适合 |
+| **确定性** | 随机初始化 | 确定 | 确定 | EM可能收敛到局部最优 |
+
+**选择指南**：
+- 数据量小、需要可解释性 → **层次聚类**
+- 有噪声、簇形状不规则 → **DBSCAN**
+- 大数据集、球形簇 → **K-Means**
+- 需要概率解释 → **GMM**
+- 不确定时 → 先用DBSCAN探索，再用K-Means验证
+
+---
+
 ## 练习与实践
 
 完成本章学习后，请尝试：
