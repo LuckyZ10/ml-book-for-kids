@@ -1,0 +1,67 @@
+## 参考文献
+
+### 经典论文
+
+Cover, T. M., & Hart, P. E. (1967). Nearest neighbor pattern classification. *IEEE Transactions on Information Theory*, *13*(1), 21-27. https://doi.org/10.1109/TIT.1967.1053964
+
+Fix, E., & Hodges, J. L. (1951). Discriminatory analysis, nonparametric discrimination: Consistency properties. *USAF School of Aviation Medicine Report*, *4*(10).
+
+### 重要扩展
+
+Keller, J. M., Gray, M. R., & Givens, J. A. (1985). A fuzzy K-nearest neighbor algorithm. *IEEE Transactions on Systems, Man, and Cybernetics*, *SMC-15*(4), 580-585. https://doi.org/10.1109/TSMC.1985.6313426
+
+Stone, C. J. (1977). Consistent nonparametric regression. *The Annals of Statistics*, *5*(4), 595-620.
+
+### 教科书与综述
+
+Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The elements of statistical learning: Data mining, inference, and prediction* (2nd ed.). Springer. (第13章: Prototypes and Nearest-Neighbors)
+
+Bishop, C. M. (2006). *Pattern recognition and machine learning*. Springer. (第2.5节: Nonparametric Methods)
+
+### 历史回顾
+
+Dasarathy, B. V. (Ed.). (1991). *Nearest neighbor (NN) norms: NN pattern classification techniques*. IEEE Computer Society Press.
+
+### 在线资源
+
+Cover, T. M., & Thomas, J. A. (2006). *Elements of information theory* (2nd ed.). Wiley-Interscience.
+
+---
+
+## 费曼检验回顾 📚
+
+让我们回顾本章的核心概念，用费曼法检验你是否真正理解了：
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│              🔍 费曼四步检验法 - KNN章节回顾                       │
+├─────────────────────────────────────────────────────────────────┤
+│ 1️⃣ 选择概念：K近邻算法                                           │
+│                                                                 │
+│ 2️⃣ 教给别人：你能用一句话解释KNN吗？                              │
+│    ✅ "KNN通过查看新样本周围最近的K个已知样本，                    │
+│        然后根据这些邻居的多数类别来决定新样本的类别。"             │
+│                                                                 │
+│ 3️⃣ 发现差距：检查这些概念是否清楚                                  │
+│    ✅ 为什么KNN被称为"懒惰学习"？                                 │
+│       → 因为它在训练阶段只是存储数据，不做任何计算                 │
+│                                                                 │
+│    ✅ Cover-Hart定理告诉我们什么？                                 │
+│       → 1-NN的错误率不超过贝叶斯最优错误率的两倍                   │
+│                                                                 │
+│    ✅ 欧氏距离和曼哈顿距离的区别？                                 │
+│       → 欧氏是直线，曼哈顿是坐标轴方向的总和                        │
+│                                                                 │
+│ 4️⃣ 简化语言：用比喻检验理解                                       │
+│    ✅ "KNN就像是搬进新小区后，问周围的邻居这个小区怎么样"          │
+│    ✅ "欧氏距离是鸟飞的距离，曼哈顿距离是人走的距离"               │
+│    ✅ "K值选择就像征求意见时问几个人——问太少可能有偏见，           │
+│        问太多又会稀释本地特色"                                    │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+*本章完*
+
+*"简单的想法往往是最深刻的。KNN提醒我们：有时候，最近的邻居比最复杂的模型更懂你。"*

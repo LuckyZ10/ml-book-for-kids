@@ -1,0 +1,82 @@
+## 参考文献
+
+1. Radford, A., Kim, J. W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., ... & Sutskever, I. (2021). Learning transferable visual models from natural language supervision. *International Conference on Machine Learning*, 8748-8763.
+
+2. Baltrušaitis, T., Ahuja, C., & Morency, L. P. (2018). Multimodal machine learning: A survey and taxonomy. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 41(2), 423-443.
+
+3. Girdhar, R., El-Nouby, A., Liu, Z., Singh, M., Alwala, K. V., Joulin, A., & Misra, I. (2023). ImageBind: One embedding space to bind them all. *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*, 15180-15190.
+
+4. Wang, P., Yang, A., Men, R., Lin, J., Bai, S., Li, Z., ... & Zhou, J. (2022). OFA: Unifying architectures, tasks, and modalities through a simple sequence-to-sequence learning framework. *International Conference on Machine Learning*, 23318-23340.
+
+5. Li, J., Li, D., Savarese, S., & Hoi, S. (2023). BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models. *International Conference on Machine Learning*, 19730-19742.
+
+---
+
+## 练习题
+
+### 基础练习
+
+**练习1**：对比学习理解
+- 假设你有一个批量包含4对匹配的图文样本
+- 请手动计算对比损失（简化版，假设相似度矩阵如下）：
+```
+      图1   图2   图3   图4
+文1:  0.9   0.3   0.2   0.1
+文2:  0.2   0.8   0.3   0.2
+文3:  0.1   0.2   0.85  0.15
+文4:  0.15  0.25  0.2   0.9
+```
+- 温度系数 $\tau = 0.1$，计算损失值
+
+**练习2**：余弦相似度计算
+- 给定向量 $a = [1, 2, 3]$ 和 $b = [4, 5, 6]$
+- 计算它们的余弦相似度
+- 解释结果的含义
+
+**练习3**：融合策略对比
+- 列举早期融合、中期融合、晚期融合各自的优缺点
+- 在什么情况下你会选择每种策略？
+
+### 进阶练习
+
+**练习4**：实现完整的多模态分类器
+- 使用本章提供的代码组件
+- 构建一个可以处理模拟图文数据的完整分类器
+- 在测试集上评估准确率
+
+**练习5**：注意力可视化
+- 修改跨模态注意力代码，实现注意力权重的可视化
+- 分析哪些图文对被分配了高注意力权重
+- 尝试故意打乱匹配关系，观察注意力如何变化
+
+**练习6**：对比学习的温度系数分析
+- 使用不同的温度系数（0.01, 0.07, 0.1, 0.5, 1.0）训练对比模型
+- 观察温度系数对训练动态和最终性能的影响
+- 解释为什么温度系数被称为"锐化参数"
+
+### 挑战练习
+
+**练习7**：实现图文检索系统
+- 构建一个小型图文检索系统
+- 输入文本查询，从图像库中检索最相关的图像
+- 使用余弦相似度作为检索依据
+- 计算Top-1和Top-5检索准确率
+
+**练习8**：多模态情感分析
+- 设计一个结合文本和图像的情感分析任务
+- 例如：分析社交媒体帖子（文字+配图）的情感倾向
+- 实现一个融合两种模态的情感分类器
+- 对比单模态和双模态的性能差异
+
+---
+
+*本章完。你已经迈出了理解多模态AI的重要一步！*
+
+---
+
+**写作统计**:
+- 正文字数: ~12,500字
+- 代码行数: ~650行
+- 核心模块: 4个（对比损失、CLIP编码器、零样本分类器、跨模态注意力）
+- 参考文献: 5篇
+- 练习题: 8道（3基础+3进阶+2挑战）

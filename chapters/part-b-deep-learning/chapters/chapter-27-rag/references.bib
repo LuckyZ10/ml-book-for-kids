@@ -1,0 +1,366 @@
+            "### 参考来源：",
+        ]
+        
+        for i, doc in enumerate(result.retrieved_documents, 1):
+            source = doc.metadata.get('source', '未知')
+            summary_parts.append(f"{i}. {source} (相关度: {doc.score:.3f})")
+        
+        return "\n".join(summary_parts)
+    
+    def compare_topics(self, topic1: str, topic2: str) -> str:
+        """
+        比较两个主题
+        
+        参数:
+            topic1: 第一个主题
+            topic2: 第二个主题
+            
+        返回:
+            比较文本
+        """
+        result1 = self.rag.query(topic1)
+        result2 = self.rag.query(topic2)
+        
+        comparison = f"""
+## 主题比较：{topic1} vs {topic2}
+
+### {topic1}
+{result1.answer}
+
+### {topic2}
+{result2.answer}
+
+### 共同点与差异
+基于检索结果，两个主题的关联度分析完成。
+"""
+        return comparison
+
+
+def summarization_demo():
+    """文档摘要演示"""
+    print("=" * 60)
+    print("RAG文档摘要演示")
+    print("=" * 60)
+    
+    # 初始化
+    embedder = MockBERTEmbedder(dimension=768)
+    vector_store = VectorStore(dimension=768)
+    documents, metadata = create_demo_knowledge_base()
+    vectors = embedder.encode(documents)
+    vector_store.add(vectors, documents, metadata)
+    
+    retriever = DenseRetriever(vector_store, embedder)
+    rag = RAGPipeline(retriever, top_k=5)
+    summarizer = SummarizationRAG(rag)
+    
+    # 主题摘要
+    print("\n[1] 主题摘要示例")
+    print("-" * 40)
+    summary = summarizer.summarize_topic("机器学习", num_docs=4)
+    print(summary)
+    
+    # 主题比较
+    print("\n\n[2] 主题比较示例")
+    print("-" * 40)
+    comparison = summarizer.compare_topics("监督学习", "无监督学习")
+    print(comparison)
+
+
+if __name__ == "__main__":
+    summarization_demo()
+```
+
+---
+
+## 27.6 高级RAG技术
+
+### 27.6.1 Self-RAG：自我反思的检索增强
+
+**问题背景**：
+
+传统RAG有一个明显的问题：**无论是否需要，它都会检索固定数量的文档**。对于"你好，今天天气怎么样？"这样的闲聊，检索文档毫无意义。更糟的是，如果检索到的文档质量差，反而可能误导生成器产生错误答案。
+
+**Self-RAG的核心思想**：
+
+2023年，Asai等人提出了Self-RAG框架。其核心创新是让模型学会**自我反思**：
+
+1. **按需检索**：模型自己决定是否需要检索
+2. **自我批判**：对检索到的文档和生成的内容进行质量评估
+3. **引用生成**：为每个事实性陈述提供引用来源
+
+**反射Token机制**：
+
+Self-RAG引入了一组特殊的**反射Token（Reflection Tokens）**：
+
+- `[Retrieve]`：是否触发检索
+- `[IsRel]`：检索文档是否与查询相关
+- `[IsSup]`：生成内容是否被文档支持
+- `[IsUse]`：生成内容是否有用
+
+在训练时，这些token被插入到标准输出中。例如：
+
+```
+输入：谁发明了电话？
+
+输出：
+[Retrieve] 是
+电话是由[IsRel] 是 亚历山大·格拉汉姆·贝尔在1876年发明的。[IsSup] 是 [IsUse] 是
+```
+
+**自适应检索**：
+
+Self-RAG使用一个检索决策阈值：
+
+- 当模型预测`[Retrieve]=是`的概率超过阈值时，执行检索
+- 否则直接基于参数记忆生成答案
+
+这使得模型在知识充足时直接回答，在不确定时主动查阅资料。
+
+**推理时定制**：
+
+Self-RAG的另一个优势是可以在推理时定制行为：
+
+- **精确模式**：要求所有事实都有支持引用，优先选择高`[IsSup]`分数的输出
+- **创意模式**：允许更多参数知识，对`[IsSup]`要求较低
+
+### 27.6.2 Corrective RAG：纠正错误检索
+
+**问题背景**：
+
+RAG系统高度依赖检索质量。当检索器返回不相关或过时的文档时，生成器往往会被误导，产生"检索增强的幻觉"。
+
+**CRAG的解决方案**：
+
+Corrective RAG（CRAG）引入了一个**检索评估器（Retrieval Evaluator）**，对检索结果进行质量打分：
+
+$$\text{Confidence} = f_\text{evaluator}(q, \{d_1, d_2, ..., d_k\})$$
+
+基于置信度，CRAG触发不同的行动：
+
+| 置信度范围 | 判定 | 行动 |
+|-----------|------|------|
+| 高 (>θ_high) | Correct | 使用检索文档生成，同时过滤低相关片段 |
+| 低 (<θ_low) | Incorrect | 放弃检索结果，转向网络搜索 |
+| 中 | Ambiguous | 结合检索文档和网络搜索结果 |
+
+**分解-重组算法**：
+
+对于被判定为"Correct"的文档，CRAG执行**分解-重组（Decompose-then-Recompose）**：
+
+1. **分解**：将长文档切分为细粒度的信息片段
+2. **过滤**：基于与查询的相关性过滤片段
+3. **重组**：将高质量片段重新组织为精炼的上下文
+
+**网络搜索扩展**：
+
+当本地检索失败时，CRAG可以调用网络搜索API（如Google Search、Bing API）获取补充信息。这使系统能够：
+- 获取最新的信息
+- 扩展知识覆盖范围
+- 验证和交叉检查事实
+
+**Plug-and-Play设计**：
+
+CRAG设计为即插即用的模块，可以与任何RAG系统集成：
+
+```python
+# CRAG可以包装任何RAG系统
+crag_rag = CRAGWrapper(base_rag_system, evaluator_model)
+result = crag_rag.query("...")
+```
+
+实验表明，CRAG在PopQA、Biography等多个数据集上显著提升了标准RAG和Self-RAG的性能。
+
+### 27.6.3 其他RAG变体
+
+**REPLUG（Retrieval-Augmented Black-Box Language Model）**：
+
+针对无法微调的闭源模型（如GPT-4），REPLUG通过**集成学习**利用检索：
+
+1. 检索k个文档
+2. 将每个文档分别与查询拼接，输入LLM
+3. 聚合k个输出分布（通过加权平均）
+4. 从聚合分布中采样生成
+
+这相当于让模型"投票"决定最佳答案，降低单一文档误导的风险。
+
+**kNN-LM（k-Nearest Neighbor Language Model）**：
+
+在生成每个词时，检索训练数据中上下文最相似的k个样本：
+
+$$P(y|x) = \lambda P_\text{LM}(y|x) + (1-\lambda) P_\text{kNN}(y|x)$$
+
+其中 $P_\text{kNN}$ 是基于检索样本的插值分布。这使得模型可以访问训练时的原始数据。
+
+**Retro（Retrieval-Enhanced Transformer）**：
+
+DeepMind提出的Retro模型将检索整合到Transformer的每一层：
+
+- 在自注意力之前，检索与当前上下文相似的文本块
+- 使用**交叉注意力**让模型关注检索到的内容
+- 在不同层使用不同时间尺度的检索（短距离 vs 长距离）
+
+Retro用2B参数达到了GPT-3（175B参数）级别的性能，证明了检索增强的参数效率。
+
+### 27.6.4 RAG的挑战与未来方向
+
+**当前挑战**：
+
+1. **检索-生成对齐**：检索器找到的文档可能不是生成器最需要的
+2. **长上下文处理**：多文档上下文可能超出模型处理长度
+3. **多跳推理**：复杂问题需要连接多个文档的信息
+4. **评估困难**：如何自动评估RAG输出的准确性和有用性
+
+**未来方向**：
+
+**自适应检索粒度**：
+- 根据问题复杂度自动调整检索文档数量
+- 从段落级检索进化到句子级、实体级精确定位
+
+**多模态RAG**：
+- 扩展RAG处理图像、视频、音频等多模态知识
+- 统一的跨模态检索和生成
+
+**Agentic RAG**：
+- 让RAG系统能够主动规划检索策略
+- 支持迭代检索、自我纠错、工具调用
+
+**个性化RAG**：
+- 根据用户背景和偏好定制检索和生成
+- 长期用户记忆整合
+
+RAG技术正在快速发展，它代表了一种新的AI范式：**将记忆（参数知识）与查找（外部检索）相结合**。这与人类认知高度一致——我们不必记住所有知识，但必须知道如何找到它们。
+
+---
+
+## 27.7 练习题
+
+### 基础练习（3题）
+
+**练习27.1 余弦相似度计算**
+
+给定三个文档向量（已归一化）：
+- $d_1 = [1, 0, 0, 0]$
+- $d_2 = [0.9, 0.1, 0, 0]$  
+- $d_3 = [0, 1, 0, 0]$
+
+以及查询向量 $q = [0.95, 0.05, 0, 0]$。
+
+1. 计算查询与每个文档的余弦相似度
+2. 如果Top-k=2，应该返回哪些文档？
+3. 解释为什么余弦相似度使用方向而非绝对大小
+
+**练习27.2 RAG概率计算**
+
+假设检索器返回两个文档及其相似度分数：
+- 文档A：相似度 2.0
+- 文档B：相似度 1.0
+
+使用softmax计算（温度τ=1），求：
+
+1. 每个文档被选择的概率
+2. 如果温度τ=0.5，概率如何变化？
+3. 如果温度τ→0，概率如何变化？这在实际应用中有何意义？
+
+**练习27.3 向量检索分析**
+
+假设知识库有100万个文档，每个文档向量768维。使用暴力搜索（计算查询与所有文档的相似度）：
+
+1. 每次查询需要多少次浮点乘法运算？
+2. 如果一台计算机每秒能执行10亿次浮点运算，查询需要多长时间？
+3. 讨论为什么实际系统需要使用近似最近邻搜索（ANN）
+
+### 进阶练习（3题）
+
+**练习27.4 RAG-Token与RAG-Sequence比较**
+
+考虑以下场景：回答"深度学习是什么？它在计算机视觉中有什么应用？"
+
+1. 分析RAG-Token可能如何为问题的不同部分检索不同文档
+2. 分析RAG-Sequence如何处理这个问题
+3. 讨论两种方法各自的优缺点和适用场景
+4. 为什么实践中RAG-Sequence通常表现更好？
+
+**练习27.5 实现简化的RAG系统**
+
+基于本章的代码框架，实现以下增强功能：
+
+1. 添加文档分段（chunking）功能，将长文档切分为合适大小的片段
+2. 实现重叠分段策略（相邻片段有重叠内容）
+3. 添加结果重排序（re-ranking）功能，使用交叉编码器对初步检索结果精排
+4. 编写测试用例验证实现
+
+**练习27.6 检索评估指标**
+
+在RAG系统中，我们需要评估检索器的质量。给定一个查询，假设：
+- 检索器返回的Top-5文档：[D1, D2, D3, D4, D5]
+- 实际上相关的文档集合：{D1, D3, D6, D7}
+
+计算以下指标：
+1. Precision@3 和 Precision@5
+2. Recall@3 和 Recall@5
+3. F1@5
+4. 平均精度（Average Precision, AP）
+
+### 挑战练习（3题）
+
+**练习27.7 Self-RAG反射Token设计**
+
+参考Self-RAG论文，设计一个针对中文问答场景的反射Token集合：
+
+1. 确定需要的反射Token类型（如检索决策、相关性评估、支持度评估等）
+2. 为每种Token设计5-10个候选Token（中文或英文）
+3. 说明每种Token的训练数据标注策略
+4. 讨论如何在推理时使用这些Token控制生成行为
+
+**练习27.8 端到端RAG训练分析**
+
+RAG的端到端训练面临检索操作不可微的挑战：
+
+1. 解释为什么Top-k选择操作是不可微的
+2. 研究并解释以下解决方案的原理：
+   - Gumbel-Softmax技巧
+   - 直通估计器（Straight-Through Estimator）
+   - REINFORCE策略梯度
+3. 比较这些方法的优缺点
+4. 设计一个实验验证不同训练策略的效果
+
+**练习27.9 多跳问答RAG系统**
+
+多跳问题需要连接多个文档的信息才能回答，例如："2024年诺贝尔文学奖得主的作品被翻译成多少种语言？"（需要找到得主→找到作品→找到翻译语言数量）
+
+设计一个RAG系统来解决多跳问题：
+
+1. 描述系统架构，包括如何表示和跟踪"中间答案"
+2. 设计迭代检索策略，使用上一轮结果改进下一轮查询
+3. 实现一个简单的两跳问答示例（如"爱因斯坦获得诺贝尔奖的年份距离他发表狭义相对论多少年？"）
+4. 讨论系统面临的挑战和可能的改进方向
+
+---
+
+## 27.8 参考文献
+
+Guu, K., Lee, K., Tung, Z., Pasupat, P., & Chang, M. (2020). REALM: Retrieval-augmented language model pre-training. In *Proceedings of the 37th International Conference on Machine Learning* (pp. 3929-3938). PMLR. https://arxiv.org/abs/2002.08909
+
+Izacard, G., Lewis, P., Lomeli, M., Hosseini, L., Petroni, F., Schick, T., ... & Grave, E. (2022). Atlas: Few-shot learning with retrieval augmented language models. *Journal of Machine Learning Research*, 24(251), 1-43. https://arxiv.org/abs/2208.03299
+
+Izacard, G., & Grave, E. (2021). Leveraging passage retrieval with generative models for open domain question answering. In *Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume* (pp. 874-880). https://aclanthology.org/2021.eacl-main.74/
+
+Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., ... & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. *Advances in Neural Information Processing Systems*, 33, 9459-9474. https://arxiv.org/abs/2005.11401
+
+Asai, A., Wu, Z., Wang, Y., Sil, A., & Hajishirzi, H. (2024). Self-RAG: Learning to retrieve, generate, and critique through self-reflection. In *The Twelfth International Conference on Learning Representations*. https://arxiv.org/abs/2310.11511
+
+Yan, S. Q., Gu, J. C., Zhu, Y., & Ling, Z. H. (2024). Corrective retrieval augmented generation. *arXiv preprint arXiv:2401.15884*. https://arxiv.org/abs/2401.15884
+
+---
+
+**本章总结**
+
+本章我们深入学习了检索增强生成（RAG）技术。从LLM的幻觉问题出发，我们理解了为什么需要外部知识检索。通过"开卷考试"的比喻，我们领会了参数记忆与非参数记忆结合的价值。
+
+我们详细探讨了向量检索的数学原理，包括余弦相似度、最大内积搜索和Top-k检索的概率解释。在此基础上，我们学习了RAG的完整架构：检索器负责从知识库中找到相关文档，生成器基于这些文档生成答案。
+
+通过约800行代码，我们从零实现了完整的RAG系统，包括VectorStore、Embedder、Retriever和RAGPipeline，并展示了问答系统和文档摘要两个应用示例。
+
+最后，我们了解了前沿的RAG变体：Self-RAG引入自我反思机制，让模型学会按需检索和自我批判；Corrective RAG通过检索评估和纠正机制提升鲁棒性。
+
+RAG代表了AI系统与外部知识交互的新范式，它让大模型从"背诵知识"进化为"查阅知识"，更加接近人类的认知方式。随着技术的不断发展，RAG将在更多领域发挥重要作用。
